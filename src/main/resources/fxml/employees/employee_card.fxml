@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import com.mebelsex.ui.components.MoneyField?>
+<?import com.mebelsex.ui.components.UzDatePicker?>
+
+<VBox spacing="16" styleClass="content-area" maxWidth="Infinity" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.employees.EmployeeCardController">
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Button text="%menu.employees" onAction="#handleBack" styleClass="secondary-button">
+            <graphic><FontIcon iconLiteral="fth-arrow-left" iconSize="16"/></graphic>
+        </Button>
+        <Label fx:id="nameLabel" styleClass="page-title"/>
+        <Label fx:id="statusLabel" styleClass="status-badge"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label text="%employee.as_of"/>
+        <UzDatePicker fx:id="asOfPicker" prefWidth="150"/>
+    </HBox>
+
+    <VBox styleClass="card" spacing="6">
+        <Label fx:id="phoneLabel" styleClass="muted-text"/>
+        <Label fx:id="positionLabel"/>
+    </VBox>
+
+    <HBox spacing="16">
+        <VBox styleClass="card" HBox.hgrow="ALWAYS" minWidth="0" spacing="6">
+            <Label text="%employee.card.earned" styleClass="stat-card-title" wrapText="true"/>
+            <Label fx:id="earnedLabel" text="—" styleClass="stat-card-value" wrapText="true"/>
+        </VBox>
+        <VBox styleClass="card" HBox.hgrow="ALWAYS" minWidth="0" spacing="6">
+            <Label text="%employee.card.paid" styleClass="stat-card-title" wrapText="true"/>
+            <Label fx:id="paidLabel" text="—" styleClass="stat-card-value" wrapText="true"/>
+        </VBox>
+        <VBox styleClass="card" HBox.hgrow="ALWAYS" minWidth="0" spacing="6">
+            <Label text="%employee.card.balance" styleClass="stat-card-title" wrapText="true"/>
+            <Label fx:id="balanceLabel" text="—" styleClass="stat-card-value" wrapText="true"/>
+        </VBox>
+    </HBox>
+
+    <TabPane fx:id="tabs" VBox.vgrow="ALWAYS">
+        <Tab text="%employee.card.tab.works" closable="false">
+            <VBox spacing="12" style="-fx-padding: 12 0 0 0;">
+                <HBox spacing="12" alignment="CENTER_LEFT">
+                    <Label text="%employee.card.period.from"/>
+                    <UzDatePicker fx:id="fromPicker" prefWidth="150"/>
+                    <Label text="%employee.card.period.to"/>
+                    <UzDatePicker fx:id="toPicker" prefWidth="150"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button fx:id="voidWorkButton" text="%employee.card.works.void" onAction="#handleVoidWork" styleClass="danger-button"/>
+                </HBox>
+                <TableView fx:id="worksTable" VBox.vgrow="ALWAYS" minWidth="200">
+                    <columns>
+                        <TableColumn fx:id="colWorkDate" text="%order.card.col.date" prefWidth="110"/>
+                        <TableColumn fx:id="colWorkOrder" text="%orders.title" prefWidth="90"/>
+                        <TableColumn fx:id="colWorkOperation" text="%operation.name" prefWidth="200"/>
+                        <TableColumn fx:id="colWorkQuantity" text="%order.card.col.quantity" prefWidth="100" styleClass="money-col"/>
+                        <TableColumn fx:id="colWorkPrice" text="%order.card.col.unit_price" prefWidth="120" styleClass="money-col"/>
+                        <TableColumn fx:id="colWorkAmount" text="%order.card.col.amount" prefWidth="130" styleClass="money-col"/>
+                        <TableColumn fx:id="colWorkStatus" text="%order.card.col.status" prefWidth="110"/>
+                    </columns>
+                    <placeholder>
+                        <Label text="%employee.card.works.empty" styleClass="muted-text"/>
+                    </placeholder>
+                </TableView>
+            </VBox>
+        </Tab>
+        <Tab text="%employee.card.tab.payments" closable="false">
+            <VBox spacing="12" style="-fx-padding: 12 0 0 0;">
+                <TableView fx:id="paymentsTable" VBox.vgrow="ALWAYS" minWidth="200">
+                    <columns>
+                        <TableColumn fx:id="colPayDate" text="%order.card.col.date" prefWidth="120"/>
+                        <TableColumn fx:id="colPayAmount" text="%order.card.col.amount" prefWidth="150" styleClass="money-col"/>
+                        <TableColumn fx:id="colPayComment" text="%order.card.col.comment" prefWidth="260"/>
+                        <TableColumn fx:id="colPayStatus" text="%order.card.col.status" prefWidth="120"/>
+                    </columns>
+                    <placeholder>
+                        <Label text="%employee.card.payments.empty" styleClass="muted-text"/>
+                    </placeholder>
+                </TableView>
+
+                <VBox fx:id="paymentQuickAdd" spacing="8">
+                    <HBox spacing="8" alignment="CENTER_LEFT">
+                        <MoneyField fx:id="amountField" prefWidth="150" minWidth="0"/>
+                        <UzDatePicker fx:id="paymentDateField" prefWidth="150" minWidth="0"/>
+                        <TextField fx:id="commentField" promptText="%employee.card.pay.comment" maxWidth="Infinity" HBox.hgrow="ALWAYS"/>
+                        <Button fx:id="addPaymentButton" text="%employee.card.pay.add" onAction="#handleAddPayment" styleClass="primary-button"/>
+                    </HBox>
+                    <HBox spacing="12" alignment="CENTER_LEFT">
+                        <Label fx:id="afterBalanceLabel" styleClass="muted-text"/>
+                        <Label fx:id="warningLabel" text="%employee.card.pay.warning" styleClass="error-label" visible="false" managed="false" wrapText="true"/>
+                    </HBox>
+                </VBox>
+
+                <HBox spacing="12" alignment="CENTER_LEFT">
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button fx:id="voidPaymentButton" text="%employee.card.payments.void" onAction="#handleVoidPayment" styleClass="danger-button"/>
+                </HBox>
+                <Label fx:id="paymentErrorLabel" styleClass="error-label" visible="false" managed="false" wrapText="true"/>
+            </VBox>
+        </Tab>
+    </TabPane>
+</VBox>

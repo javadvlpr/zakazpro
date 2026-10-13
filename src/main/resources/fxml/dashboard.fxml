@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox styleClass="content-area" maxWidth="Infinity" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.DashboardController">
+    <ScrollPane fitToWidth="true" styleClass="scroll-pane" VBox.vgrow="ALWAYS">
+        <VBox spacing="24">
+            
+            <!-- Page Title Row -->
+            <HBox alignment="CENTER_LEFT">
+                <Label text="%menu.home" styleClass="page-title" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                <Button fx:id="newOrderButton" text="%ui.new_order" onAction="#handleNewOrder" styleClass="primary-button">
+                    <graphic><FontIcon iconLiteral="fth-plus" iconSize="16"/></graphic>
+                </Button>
+            </HBox>
+            
+            <!-- Stat Cards -->
+            <HBox spacing="16">
+                <VBox styleClass="card" HBox.hgrow="ALWAYS" minWidth="0" spacing="6">
+                    <Label text="%ui.active_orders" styleClass="stat-card-title" wrapText="true"/>
+                    <Label fx:id="activeOrdersLabel" text="—" styleClass="stat-card-value" wrapText="true"/>
+                </VBox>
+                <VBox styleClass="card" HBox.hgrow="ALWAYS" minWidth="0" spacing="6">
+                    <Label text="%ui.customer_debt" styleClass="stat-card-title" wrapText="true"/>
+                    <Label fx:id="debtLabel" text="—" styleClass="stat-card-value" wrapText="true"/>
+                </VBox>
+                <VBox styleClass="card" HBox.hgrow="ALWAYS" minWidth="0" spacing="6">
+                    <Label text="%dashboard.overdue" styleClass="stat-card-title" wrapText="true"/>
+                    <Label fx:id="overdueLabel" text="—" styleClass="stat-card-value" wrapText="true"/>
+                </VBox>
+                <VBox styleClass="card" HBox.hgrow="ALWAYS" minWidth="0" spacing="6">
+                    <Label text="%dashboard.month_income" styleClass="stat-card-title" wrapText="true"/>
+                    <Label fx:id="incomeLabel" text="—" styleClass="stat-card-value stat-card-profit" wrapText="true"/>
+                </VBox>
+                <VBox styleClass="card" HBox.hgrow="ALWAYS" minWidth="0" spacing="6">
+                    <Label text="%dashboard.workers_owed" styleClass="stat-card-title" wrapText="true"/>
+                    <Label fx:id="workersOwedLabel" text="—" styleClass="stat-card-value" wrapText="true"/>
+                </VBox>
+                <VBox styleClass="card" HBox.hgrow="ALWAYS" minWidth="0" spacing="6">
+                    <Label text="%dashboard.month_profit" styleClass="stat-card-title" wrapText="true"/>
+                    <Label fx:id="monthProfitLabel" text="—" styleClass="stat-card-value" wrapText="true"/>
+                </VBox>
+            </HBox>
+            
+            <!-- Last backup -->
+            <HBox spacing="16">
+                <VBox styleClass="card" minWidth="0" maxWidth="280" spacing="6">
+                    <Label text="%dashboard.backup.title" styleClass="stat-card-title" wrapText="true"/>
+                    <Label fx:id="backupLabel" text="—" styleClass="stat-card-value" wrapText="true"/>
+                </VBox>
+            </HBox>
+
+            <!-- Due-soon orders -->
+            <VBox styleClass="card" spacing="12" VBox.vgrow="ALWAYS">
+                <Label text="%dashboard.due_soon" styleClass="section-title"/>
+                <TableView fx:id="dueSoonTable" prefHeight="240" VBox.vgrow="ALWAYS" minWidth="200">
+                    <columns>
+                        <TableColumn fx:id="colNo" text="№" prefWidth="60"/>
+                        <TableColumn fx:id="colCustomer" text="%order.customer" prefWidth="200"/>
+                        <TableColumn fx:id="colProduct" text="%order.product" prefWidth="240"/>
+                        <TableColumn fx:id="colDue" text="%order.dueDate" prefWidth="120"/>
+                        <TableColumn fx:id="colDebt" text="%order.debt" prefWidth="140" styleClass="money-col"/>
+                    </columns>
+                    <placeholder>
+                        <Label text="%dashboard.due_soon.empty" styleClass="muted-text"/>
+                    </placeholder>
+                </TableView>
+            </VBox>
+            
+        </VBox>
+    </ScrollPane>
+</VBox>

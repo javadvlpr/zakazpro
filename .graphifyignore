@@ -1,0 +1,11 @@
+target/
+.idea/
+.mvn/
+graphify-out/
+*.db
+backup/
+snapshots_*/
+*.txt
+*.db
+.freebuff/
+HELP.md

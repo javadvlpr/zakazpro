@@ -1,0 +1,1809 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.mebelsex:mebelsex >------------------------
+[INFO] Building ZakazPro 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ mebelsex ---
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ mebelsex ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 28 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ mebelsex ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 193 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ mebelsex ---
+[INFO] Copying 2 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ mebelsex ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 88 source files with javac [debug parameters release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ mebelsex ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.mebelsex.backup.BackupFileInspectorTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.534 s -- in com.mebelsex.backup.BackupFileInspectorTest
+[INFO] Running com.mebelsex.backup.BackupFolderMarkerIntegrationTest
+13:58:25.737 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mebelsex.backup.BackupFolderMarkerIntegrationTest]: BackupFolderMarkerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:58:25.836 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.backup.BackupFolderMarkerIntegrationTest
+13:58:25.933 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mebelsex.backup.BackupFolderMarkerIntegrationTest]: BackupFolderMarkerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:58:25.935 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.backup.BackupFolderMarkerIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:26.275 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.3.Final
+2026-10-06 13:58:26.321 INFO  [main] c.m.b.BackupFolderMarkerIntegrationTest - Starting BackupFolderMarkerIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:26.322 INFO  [main] c.m.b.BackupFolderMarkerIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:26.922 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:27.010 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:27.691 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-10-06 13:58:27.732 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.sqlite.jdbc4.JDBC4Connection@61554b6b
+2026-10-06 13:58:27.734 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-10-06 13:58:27.745 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-marker-50688c58-ce9b-4fab-a5ef-532b202485a2.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:27.801 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:27.804 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.017s)
+2026-10-06 13:58:27.806 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:27.836 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:27.853 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:27.871 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:27.878 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.007s)
+2026-10-06 13:58:27.978 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:28.054 INFO  [main] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-06 13:58:28.451 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:28.519 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-marker-50688c58-ce9b-4fab-a5ef-532b202485a2.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:29.408 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:29.444 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:29.512 INFO  [main] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-06 13:58:29.694 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:31.162 INFO  [main] c.m.b.BackupFolderMarkerIntegrationTest - Started BackupFolderMarkerIntegrationTest in 5.185 seconds (process running for 7.177)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-10-06 13:58:31.624 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-3699326296002668996\backups\2026-10-06\zakazpro_2026-10-06_13-58.db
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.019 s -- in com.mebelsex.backup.BackupFolderMarkerIntegrationTest
+[INFO] Running com.mebelsex.backup.BackupFolderMarkerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 s -- in com.mebelsex.backup.BackupFolderMarkerTest
+[INFO] Running com.mebelsex.backup.BackupPolicyTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.mebelsex.backup.BackupPolicyTest
+[INFO] Running com.mebelsex.backup.BackupServiceIntegrationTest
+2026-10-06 13:58:31.673 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.backup.BackupServiceIntegrationTest]: BackupServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:31.678 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.backup.BackupServiceIntegrationTest
+2026-10-06 13:58:31.679 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.backup.BackupServiceIntegrationTest]: BackupServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:31.681 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.backup.BackupServiceIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:31.715 INFO  [main] c.m.b.BackupServiceIntegrationTest - Starting BackupServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:31.715 INFO  [main] c.m.b.BackupServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:31.856 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:31.882 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:31.952 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-10-06 13:58:31.984 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection org.sqlite.jdbc4.JDBC4Connection@3e0032f
+2026-10-06 13:58:31.985 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-10-06 13:58:31.985 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-backup-730c20eb-19a7-49b4-81e8-3c280f1162ba.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:31.994 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:31.994 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.002s)
+2026-10-06 13:58:31.994 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:31.999 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:32.004 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:32.012 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:32.015 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.004s)
+2026-10-06 13:58:32.035 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:32.060 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:32.062 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-backup-730c20eb-19a7-49b4-81e8-3c280f1162ba.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:32.166 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:32.173 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:32.193 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:32.324 INFO  [main] c.m.b.BackupServiceIntegrationTest - Started BackupServiceIntegrationTest in 0.635 seconds (process running for 8.34)
+2026-10-06 13:58:32.422 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-10844898274171463667\2026-10-06\zakazpro_2026-10-06_13-58.db
+2026-10-06 13:58:32.490 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-17069721925602301633\2026-10-06\zakazpro_2026-10-06_13-58.db
+2026-10-06 13:58:32.530 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-15450779597572854968\2026-10-06\zakazpro_2026-10-06_13-58.db
+2026-10-06 13:58:32.577 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-11102889217948093079\2026-10-06\zakazpro_2026-10-06_13-58.db
+2026-10-06 13:58:32.656 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-9502587065317942414\2026-10-06\zakazpro_2026-10-06_13-58.db
+2026-10-06 13:58:32.691 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-9502587065317942414\2026-10-06\zakazpro_2026-10-06_13-58_2.db
+2026-10-06 13:58:32.734 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-19120722792814639\back'up\2026-10-06\zakazpro_2026-10-06_13-58.db
+2026-10-06 13:58:32.778 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-7116557678555861366\2026-10-06\zakazpro_2026-10-06_13-58.db
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.116 s -- in com.mebelsex.backup.BackupServiceIntegrationTest
+[INFO] Running com.mebelsex.backup.PendingRestoreApplierTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.031 s -- in com.mebelsex.backup.PendingRestoreApplierTest
+[INFO] Running com.mebelsex.backup.RecoveryApplyTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.125 s -- in com.mebelsex.backup.RecoveryApplyTest
+[INFO] Running com.mebelsex.backup.RestoreFlowTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.024 s -- in com.mebelsex.backup.RestoreFlowTest
+[INFO] Running com.mebelsex.backup.RestoreServiceIntegrationTest
+2026-10-06 13:58:32.972 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.backup.RestoreServiceIntegrationTest]: RestoreServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:32.974 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.backup.RestoreServiceIntegrationTest
+2026-10-06 13:58:32.975 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.backup.RestoreServiceIntegrationTest]: RestoreServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:32.976 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.backup.RestoreServiceIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:33.000 INFO  [main] c.m.b.RestoreServiceIntegrationTest - Starting RestoreServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:33.001 INFO  [main] c.m.b.RestoreServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:33.134 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:33.163 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:33.222 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+2026-10-06 13:58:33.256 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Added connection org.sqlite.jdbc4.JDBC4Connection@ce18b7b
+2026-10-06 13:58:33.257 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+2026-10-06 13:58:33.258 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-restore-c89e8d35-7621-4318-9582-25b347fc963c.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:33.265 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:33.266 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.002s)
+2026-10-06 13:58:33.266 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:33.273 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:33.278 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:33.284 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:33.287 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.003s)
+2026-10-06 13:58:33.306 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:33.329 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:33.332 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-restore-c89e8d35-7621-4318-9582-25b347fc963c.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:33.436 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:33.441 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:33.454 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:33.555 INFO  [main] c.m.b.RestoreServiceIntegrationTest - Started RestoreServiceIntegrationTest in 0.577 seconds (process running for 9.57)
+2026-10-06 13:58:33.624 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-15589716788263074683\2026-10-06\zakazpro_2026-10-06_13-58.db
+2026-10-06 13:58:33.649 INFO  [main] com.mebelsex.backup.BackupService - Backup created (BEFORE_RESTORE) -> C:\Users\imomn\AppData\Local\Temp\junit-15589716788263074683\2026-10-06\zakazpro_2026-10-06_13-58_2.db
+2026-10-06 13:58:33.659 INFO  [main] com.mebelsex.backup.RestoreService - Restore scheduled from C:\Users\imomn\AppData\Local\Temp\junit-15589716788263074683\2026-10-06\zakazpro_2026-10-06_13-58.db
+2026-10-06 13:58:33.670 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-restore-c89e8d35-7621-4318-9582-25b347fc963c.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:33.717 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-11832949449089762169\2026-10-06\zakazpro_2026-10-06_13-58.db
+2026-10-06 13:58:33.719 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-restore-c89e8d35-7621-4318-9582-25b347fc963c.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:33.735 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-restore-c89e8d35-7621-4318-9582-25b347fc963c.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:33.769 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-14660783799071978496\2026-10-06\zakazpro_2026-10-06_13-58.db
+2026-10-06 13:58:33.792 INFO  [main] com.mebelsex.backup.BackupService - Backup created (BEFORE_RESTORE) -> C:\Users\imomn\AppData\Local\Temp\junit-14660783799071978496\2026-10-06\zakazpro_2026-10-06_13-58_2.db
+2026-10-06 13:58:33.796 INFO  [main] com.mebelsex.backup.RestoreService - Restore scheduled from C:\Users\imomn\AppData\Local\Temp\junit-14660783799071978496\2026-10-06\zakazpro_2026-10-06_13-58.db
+2026-10-06 13:58:33.824 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-14381942481553050675\2026-10-06\zakazpro_2026-10-06_13-58.db
+2026-10-06 13:58:33.830 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-restore-c89e8d35-7621-4318-9582-25b347fc963c.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:33.867 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-8021617268671368858\2026-10-06\zakazpro_2026-10-06_13-58.db
+2026-10-06 13:58:33.867 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-restore-c89e8d35-7621-4318-9582-25b347fc963c.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.906 s -- in com.mebelsex.backup.RestoreServiceIntegrationTest
+[INFO] Running com.mebelsex.backup.StartupDatabaseCheckTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.032 s -- in com.mebelsex.backup.StartupDatabaseCheckTest
+[INFO] Running com.mebelsex.common.AppInfoTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in com.mebelsex.common.AppInfoTest
+[INFO] Running com.mebelsex.common.DiagnosticsBuilderTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s -- in com.mebelsex.common.DiagnosticsBuilderTest
+[INFO] Running com.mebelsex.common.FlywayMigrationsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.mebelsex.common.FlywayMigrationsTest
+[INFO] Running com.mebelsex.common.FormattersTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.mebelsex.common.FormattersTest
+[INFO] Running com.mebelsex.common.LogbackConfigTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.mebelsex.common.LogbackConfigTest
+[INFO] Running com.mebelsex.common.MessagesTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.018 s -- in com.mebelsex.common.MessagesTest
+[INFO] Running com.mebelsex.common.MoneyConverterTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.mebelsex.common.MoneyConverterTest
+[INFO] Running com.mebelsex.common.NoConsoleOutputTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in com.mebelsex.common.NoConsoleOutputTest
+[INFO] Running com.mebelsex.common.OrderDateMigrationTest
+2026-10-06 13:58:34.027 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:C:\Users\imomn\OneDrive\Desktop\mebelsex\target\orderdate-migration-53f0909e-fe56-4030-9806-089899aaff42.db (SQLite 3.53)
+2026-10-06 13:58:34.031 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:34.031 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:34.031 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:34.036 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:34.040 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:34.046 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 1 migration to schema "main", now at version v1 (execution time 00:00.002s)
+2026-10-06 13:58:34.067 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:C:\Users\imomn\OneDrive\Desktop\mebelsex\target\orderdate-migration-53f0909e-fe56-4030-9806-089899aaff42.db (SQLite 3.53)
+2026-10-06 13:58:34.072 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.002s)
+2026-10-06 13:58:34.073 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": 1
+2026-10-06 13:58:34.074 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:34.080 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 1 migration to schema "main", now at version v2 (execution time 00:00.001s)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 s -- in com.mebelsex.common.OrderDateMigrationTest
+[INFO] Running com.mebelsex.common.ProductNameTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 s -- in com.mebelsex.common.ProductNameTest
+[INFO] Running com.mebelsex.common.QuantityConverterTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in com.mebelsex.common.QuantityConverterTest
+[INFO] Running com.mebelsex.common.SingleInstanceGuardTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.351 s -- in com.mebelsex.common.SingleInstanceGuardTest
+[INFO] Running com.mebelsex.common.StartupFailureMapperTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.mebelsex.common.StartupFailureMapperTest
+[INFO] Running com.mebelsex.common.TimestampConverterTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.mebelsex.common.TimestampConverterTest
+[INFO] Running com.mebelsex.CustomerOrderPaymentIntegrationTest
+2026-10-06 13:58:35.508 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.CustomerOrderPaymentIntegrationTest]: CustomerOrderPaymentIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:35.519 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.CustomerOrderPaymentIntegrationTest
+2026-10-06 13:58:35.521 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.CustomerOrderPaymentIntegrationTest]: CustomerOrderPaymentIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:35.522 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.CustomerOrderPaymentIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:35.567 INFO  [main] c.m.CustomerOrderPaymentIntegrationTest - Starting CustomerOrderPaymentIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:35.568 INFO  [main] c.m.CustomerOrderPaymentIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:35.670 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:35.692 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:35.743 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+2026-10-06 13:58:35.778 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-4 - Added connection org.sqlite.jdbc4.JDBC4Connection@2b648329
+2026-10-06 13:58:35.779 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+2026-10-06 13:58:35.779 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-638a1fcf-b93f-4e9a-a2b4-113c6256fe8a.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:35.786 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:35.787 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.002s)
+2026-10-06 13:58:35.787 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:35.792 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:35.802 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:35.809 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:35.813 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.003s)
+2026-10-06 13:58:35.829 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:35.856 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:35.859 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-638a1fcf-b93f-4e9a-a2b4-113c6256fe8a.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:35.951 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:35.956 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:35.971 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:36.071 INFO  [main] c.m.CustomerOrderPaymentIntegrationTest - Started CustomerOrderPaymentIntegrationTest in 0.543 seconds (process running for 12.086)
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.840 s -- in com.mebelsex.CustomerOrderPaymentIntegrationTest
+[INFO] Running com.mebelsex.employees.EmployeeBalanceIntegrationTest
+2026-10-06 13:58:36.351 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.employees.EmployeeBalanceIntegrationTest]: EmployeeBalanceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:36.362 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.employees.EmployeeBalanceIntegrationTest
+2026-10-06 13:58:36.363 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.employees.EmployeeBalanceIntegrationTest]: EmployeeBalanceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:36.364 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.employees.EmployeeBalanceIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:36.387 INFO  [main] c.m.e.EmployeeBalanceIntegrationTest - Starting EmployeeBalanceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:36.387 INFO  [main] c.m.e.EmployeeBalanceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:36.489 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:36.510 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:36.562 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+2026-10-06 13:58:36.598 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection org.sqlite.jdbc4.JDBC4Connection@7c12e6e3
+2026-10-06 13:58:36.598 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+2026-10-06 13:58:36.598 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-balance-2dd83b8d-3b40-4987-9b69-bcc3961913e1.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:36.604 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:36.605 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:36.605 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:36.611 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:36.614 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:36.620 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:36.623 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.002s)
+2026-10-06 13:58:36.637 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:36.658 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:36.661 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-balance-2dd83b8d-3b40-4987-9b69-bcc3961913e1.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:36.743 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:36.748 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:36.761 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:36.853 INFO  [main] c.m.e.EmployeeBalanceIntegrationTest - Started EmployeeBalanceIntegrationTest in 0.486 seconds (process running for 12.868)
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.713 s -- in com.mebelsex.employees.EmployeeBalanceIntegrationTest
+[INFO] Running com.mebelsex.expenses.ExpenseCatalogServiceIntegrationTest
+2026-10-06 13:58:37.064 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.expenses.ExpenseCatalogServiceIntegrationTest]: ExpenseCatalogServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:37.073 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.expenses.ExpenseCatalogServiceIntegrationTest
+2026-10-06 13:58:37.074 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.expenses.ExpenseCatalogServiceIntegrationTest]: ExpenseCatalogServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:37.076 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.expenses.ExpenseCatalogServiceIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:37.105 INFO  [main] c.m.e.ExpenseCatalogServiceIntegrationTest - Starting ExpenseCatalogServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:37.106 INFO  [main] c.m.e.ExpenseCatalogServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:37.200 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:37.224 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:37.260 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+2026-10-06 13:58:37.295 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection org.sqlite.jdbc4.JDBC4Connection@729f1db0
+2026-10-06 13:58:37.295 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+2026-10-06 13:58:37.295 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-cat-ab7ede90-1a8f-4b05-be71-1b9d4ab23608.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:37.301 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:37.301 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:37.301 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:37.306 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:37.309 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:37.314 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:37.317 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.002s)
+2026-10-06 13:58:37.331 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:37.349 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:37.351 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-cat-ab7ede90-1a8f-4b05-be71-1b9d4ab23608.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:37.441 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:37.446 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:37.458 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:37.544 INFO  [main] c.m.e.ExpenseCatalogServiceIntegrationTest - Started ExpenseCatalogServiceIntegrationTest in 0.465 seconds (process running for 13.558)
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.608 s -- in com.mebelsex.expenses.ExpenseCatalogServiceIntegrationTest
+[INFO] Running com.mebelsex.expenses.ExpenseServiceIntegrationTest
+2026-10-06 13:58:37.672 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.expenses.ExpenseServiceIntegrationTest]: ExpenseServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:37.673 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.expenses.ExpenseServiceIntegrationTest
+2026-10-06 13:58:37.673 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.expenses.ExpenseServiceIntegrationTest]: ExpenseServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:37.675 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.expenses.ExpenseServiceIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:37.704 INFO  [main] c.m.e.ExpenseServiceIntegrationTest - Starting ExpenseServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:37.704 INFO  [main] c.m.e.ExpenseServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:37.790 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:37.813 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:37.852 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+2026-10-06 13:58:37.886 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection org.sqlite.jdbc4.JDBC4Connection@5690126f
+2026-10-06 13:58:37.886 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+2026-10-06 13:58:37.887 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-exp-adf300cc-20e1-4806-b73f-b6293e53c08f.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:37.892 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:37.892 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:37.892 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:37.897 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:37.900 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:37.904 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:37.907 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:37.919 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:37.937 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:37.939 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-exp-adf300cc-20e1-4806-b73f-b6293e53c08f.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:38.020 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:38.026 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:38.038 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:38.119 INFO  [main] c.m.e.ExpenseServiceIntegrationTest - Started ExpenseServiceIntegrationTest in 0.442 seconds (process running for 14.134)
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.676 s -- in com.mebelsex.expenses.ExpenseServiceIntegrationTest
+[INFO] Running com.mebelsex.license.ClockGuardTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.mebelsex.license.ClockGuardTest
+[INFO] Running com.mebelsex.license.ExceptionCauseUnwrapperTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in com.mebelsex.license.ExceptionCauseUnwrapperTest
+[INFO] Running com.mebelsex.license.LicenseFormatTest
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.059 s -- in com.mebelsex.license.LicenseFormatTest
+[INFO] Running com.mebelsex.license.LicenseKeysTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s -- in com.mebelsex.license.LicenseKeysTest
+[INFO] Running com.mebelsex.license.LicenseReasonKeysTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s -- in com.mebelsex.license.LicenseReasonKeysTest
+[INFO] Running com.mebelsex.license.LicenseSecretScanTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s -- in com.mebelsex.license.LicenseSecretScanTest
+[INFO] Running com.mebelsex.license.LicenseServiceTest
+2026-10-06 13:58:38.511 WARN  [main] com.mebelsex.license.LicenseService - Machine id unavailable: yo'q
+2026-10-06 13:58:38.513 INFO  [main] com.mebelsex.license.LicenseService - License state BLOCKED (license.reason.no_machine_id)
+2026-10-06 13:58:38.542 INFO  [main] com.mebelsex.license.LicenseService - License state READ_ONLY (license.reason.expired)
+2026-10-06 13:58:38.551 INFO  [main] com.mebelsex.license.LicenseService - License state READ_ONLY (license.reason.clock)
+2026-10-06 13:58:38.580 INFO  [main] com.mebelsex.license.LicenseService - License state BLOCKED (license.reason.missing)
+2026-10-06 13:58:38.587 INFO  [main] com.mebelsex.license.LicenseService - License state VALID
+2026-10-06 13:58:38.594 INFO  [main] com.mebelsex.license.LicenseService - License state VALID
+2026-10-06 13:58:38.597 INFO  [main] com.mebelsex.license.LicenseService - License state VALID
+2026-10-06 13:58:38.610 INFO  [main] com.mebelsex.license.LicenseService - License imported from a file (301 bytes)
+2026-10-06 13:58:38.613 INFO  [main] com.mebelsex.license.LicenseService - License state VALID
+2026-10-06 13:58:38.620 INFO  [main] com.mebelsex.license.LicenseService - License state VALID
+2026-10-06 13:58:38.628 INFO  [main] com.mebelsex.license.LicenseService - License state BLOCKED (license.reason.wrong_machine)
+2026-10-06 13:58:38.637 INFO  [main] com.mebelsex.license.LicenseService - License imported from a file (287 bytes)
+2026-10-06 13:58:38.640 INFO  [main] com.mebelsex.license.LicenseService - License state VALID
+2026-10-06 13:58:38.648 INFO  [main] com.mebelsex.license.LicenseService - License state BLOCKED (license.reason.malformed)
+2026-10-06 13:58:38.656 INFO  [main] com.mebelsex.license.LicenseService - License state BLOCKED (license.reason.bad_signature)
+2026-10-06 13:58:38.659 WARN  [main] com.mebelsex.license.LicenseService - License DEV mode is active (mebelsex.license.dev=true); forced state: VALID
+2026-10-06 13:58:38.659 INFO  [main] com.mebelsex.license.LicenseService - License state VALID
+2026-10-06 13:58:38.660 WARN  [main] com.mebelsex.license.LicenseService - License DEV mode is active (mebelsex.license.dev=true); forced state: READ_ONLY
+2026-10-06 13:58:38.660 INFO  [main] com.mebelsex.license.LicenseService - License state READ_ONLY (license.reason.expired)
+2026-10-06 13:58:38.660 WARN  [main] com.mebelsex.license.LicenseService - License DEV mode is active (mebelsex.license.dev=true); forced state: BLOCKED
+2026-10-06 13:58:38.660 INFO  [main] com.mebelsex.license.LicenseService - License state BLOCKED (license.reason.missing)
+2026-10-06 13:58:38.660 WARN  [main] com.mebelsex.license.LicenseService - License DEV mode is active (mebelsex.license.dev=true); forced state: EXPIRING
+2026-10-06 13:58:38.660 INFO  [main] com.mebelsex.license.LicenseService - License state VALID
+2026-10-06 13:58:38.660 WARN  [main] com.mebelsex.license.LicenseService - License DEV mode is active (mebelsex.license.dev=true); forced state: VALID
+2026-10-06 13:58:38.665 INFO  [main] com.mebelsex.license.LicenseService - License state BLOCKED (license.reason.no_key)
+2026-10-06 13:58:38.672 INFO  [main] com.mebelsex.license.LicenseService - License state READ_ONLY (license.reason.expired)
+2026-10-06 13:58:38.680 INFO  [main] com.mebelsex.license.LicenseService - License state READ_ONLY (license.reason.clock)
+2026-10-06 13:58:38.686 INFO  [main] com.mebelsex.license.LicenseService - License state VALID
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.186 s -- in com.mebelsex.license.LicenseServiceTest
+[INFO] Running com.mebelsex.license.LicenseStatusCalculatorTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.mebelsex.license.LicenseStatusCalculatorTest
+[INFO] Running com.mebelsex.license.LicenseVerifierTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 s -- in com.mebelsex.license.LicenseVerifierTest
+[INFO] Running com.mebelsex.license.LicenseWriteGuardIntegrationTest
+2026-10-06 13:58:38.729 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.license.LicenseWriteGuardIntegrationTest]: LicenseWriteGuardIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:38.740 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.license.LicenseWriteGuardIntegrationTest
+2026-10-06 13:58:38.741 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.license.LicenseWriteGuardIntegrationTest]: LicenseWriteGuardIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:38.743 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.license.LicenseWriteGuardIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:38.768 INFO  [main] c.m.l.LicenseWriteGuardIntegrationTest - Starting LicenseWriteGuardIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:38.768 INFO  [main] c.m.l.LicenseWriteGuardIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:38.842 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:38.860 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:38.899 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+2026-10-06 13:58:38.933 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-8 - Added connection org.sqlite.jdbc4.JDBC4Connection@5c92fcf3
+2026-10-06 13:58:38.933 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+2026-10-06 13:58:38.934 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-license-guard-610b6ad0-73d3-4355-a25b-d1205ac8f447.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:38.939 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:38.940 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:38.940 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:38.944 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:38.946 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:38.950 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:38.952 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:38.965 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:38.980 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:38.981 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-license-guard-610b6ad0-73d3-4355-a25b-d1205ac8f447.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:39.057 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:39.062 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:39.075 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:39.174 INFO  [main] c.m.l.LicenseWriteGuardIntegrationTest - Started LicenseWriteGuardIntegrationTest in 0.429 seconds (process running for 15.188)
+2026-10-06 13:58:39.282 INFO  [main] com.mebelsex.backup.BackupService - Backup created (MANUAL) -> C:\Users\imomn\AppData\Local\Temp\junit-17143240433598877391\backups\2026-10-06\zakazpro_2026-10-06_13-58.db
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.566 s -- in com.mebelsex.license.LicenseWriteGuardIntegrationTest
+[INFO] Running com.mebelsex.license.MachineGuidParserTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.mebelsex.license.MachineGuidParserTest
+[INFO] Running com.mebelsex.license.MachineIdTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in com.mebelsex.license.MachineIdTest
+[INFO] Running com.mebelsex.license.ResourcePublicKeyProviderTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in com.mebelsex.license.ResourcePublicKeyProviderTest
+[INFO] Running com.mebelsex.license.tool.LicenseCliTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.109 s -- in com.mebelsex.license.tool.LicenseCliTest
+[INFO] Running com.mebelsex.orders.OrderCardDashboardIntegrationTest
+2026-10-06 13:58:39.423 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.orders.OrderCardDashboardIntegrationTest]: OrderCardDashboardIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:39.432 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.orders.OrderCardDashboardIntegrationTest
+2026-10-06 13:58:39.433 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.orders.OrderCardDashboardIntegrationTest]: OrderCardDashboardIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:39.434 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.orders.OrderCardDashboardIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:39.452 INFO  [main] c.m.o.OrderCardDashboardIntegrationTest - Starting OrderCardDashboardIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:39.452 INFO  [main] c.m.o.OrderCardDashboardIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:39.533 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:39.554 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:39.595 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+2026-10-06 13:58:39.601 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-9 - Added connection org.sqlite.jdbc4.JDBC4Connection@19463055
+2026-10-06 13:58:39.601 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+2026-10-06 13:58:39.601 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-card-5c65bf50-d886-4a6b-ae66-daf9f7ff729b.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:39.607 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:39.608 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:39.608 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:39.612 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:39.614 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:39.619 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:39.621 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:39.634 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:39.656 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:39.657 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-card-5c65bf50-d886-4a6b-ae66-daf9f7ff729b.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:39.736 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:39.741 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:39.752 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:39.832 INFO  [main] c.m.o.OrderCardDashboardIntegrationTest - Started OrderCardDashboardIntegrationTest in 0.395 seconds (process running for 15.846)
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.538 s -- in com.mebelsex.orders.OrderCardDashboardIntegrationTest
+[INFO] Running com.mebelsex.orders.OrderDateIntegrationTest
+2026-10-06 13:58:39.960 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.orders.OrderDateIntegrationTest]: OrderDateIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:39.961 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.orders.OrderDateIntegrationTest
+2026-10-06 13:58:39.962 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.orders.OrderDateIntegrationTest]: OrderDateIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:39.962 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.orders.OrderDateIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:39.979 INFO  [main] c.m.orders.OrderDateIntegrationTest - Starting OrderDateIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:39.979 INFO  [main] c.m.orders.OrderDateIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:40.051 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:40.075 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:40.106 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
+2026-10-06 13:58:40.112 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-10 - Added connection org.sqlite.jdbc4.JDBC4Connection@e52ced8
+2026-10-06 13:58:40.112 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
+2026-10-06 13:58:40.112 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-orderdate-2c77e356-1c7e-4d12-8495-aae004f78eae.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:40.117 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:40.117 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:40.117 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:40.120 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:40.122 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:40.126 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:40.128 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:40.137 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:40.152 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:40.162 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-orderdate-2c77e356-1c7e-4d12-8495-aae004f78eae.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:40.218 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:40.223 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:40.230 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:40.297 INFO  [main] c.m.orders.OrderDateIntegrationTest - Started OrderDateIntegrationTest in 0.332 seconds (process running for 16.311)
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.410 s -- in com.mebelsex.orders.OrderDateIntegrationTest
+[INFO] Running com.mebelsex.orders.OrderEditDtoIntegrationTest
+2026-10-06 13:58:40.371 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.orders.OrderEditDtoIntegrationTest]: OrderEditDtoIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:40.371 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.orders.OrderEditDtoIntegrationTest
+2026-10-06 13:58:40.373 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.orders.OrderEditDtoIntegrationTest]: OrderEditDtoIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:40.374 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.orders.OrderEditDtoIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:40.395 INFO  [main] c.m.o.OrderEditDtoIntegrationTest - Starting OrderEditDtoIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:40.395 INFO  [main] c.m.o.OrderEditDtoIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:40.460 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:40.478 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:40.564 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
+2026-10-06 13:58:40.597 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-11 - Added connection org.sqlite.jdbc4.JDBC4Connection@10663a96
+2026-10-06 13:58:40.598 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
+2026-10-06 13:58:40.598 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-edit-3b9afbc0-acbc-491a-b5cb-f0c18effe1bb.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:40.602 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:40.602 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:40.602 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:40.606 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:40.608 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:40.612 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:40.615 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:40.627 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:40.645 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:40.648 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-edit-3b9afbc0-acbc-491a-b5cb-f0c18effe1bb.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:40.710 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:40.715 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:40.725 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:40.789 INFO  [main] c.m.o.OrderEditDtoIntegrationTest - Started OrderEditDtoIntegrationTest in 0.413 seconds (process running for 16.804)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.468 s -- in com.mebelsex.orders.OrderEditDtoIntegrationTest
+[INFO] Running com.mebelsex.orders.OrderListIntegrationTest
+2026-10-06 13:58:40.837 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.orders.OrderListIntegrationTest]: OrderListIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:40.839 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.orders.OrderListIntegrationTest
+2026-10-06 13:58:40.839 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.orders.OrderListIntegrationTest]: OrderListIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:40.840 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.orders.OrderListIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:40.858 INFO  [main] c.m.orders.OrderListIntegrationTest - Starting OrderListIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:40.858 INFO  [main] c.m.orders.OrderListIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:40.934 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:40.951 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:40.984 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Starting...
+2026-10-06 13:58:40.989 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-12 - Added connection org.sqlite.jdbc4.JDBC4Connection@5a367832
+2026-10-06 13:58:40.989 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Start completed.
+2026-10-06 13:58:40.989 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-orderlist-edc30cf4-cb10-4628-b090-d32b36ad7325.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:40.995 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:40.995 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:40.995 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:40.999 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:41.001 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:41.005 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:41.010 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.002s)
+2026-10-06 13:58:41.023 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:41.039 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:41.041 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-orderlist-edc30cf4-cb10-4628-b090-d32b36ad7325.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:41.103 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:41.108 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:41.118 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:41.190 INFO  [main] c.m.orders.OrderListIntegrationTest - Started OrderListIntegrationTest in 0.347 seconds (process running for 17.205)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.481 s -- in com.mebelsex.orders.OrderListIntegrationTest
+[INFO] Running com.mebelsex.release.IconBuilderTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.379 s -- in com.mebelsex.release.IconBuilderTest
+[INFO] Running com.mebelsex.release.InstallerBuilderCommandTest
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.037 s -- in com.mebelsex.release.InstallerBuilderCommandTest
+[INFO] Running com.mebelsex.release.InstallerConfigTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.mebelsex.release.InstallerConfigTest
+[INFO] Running com.mebelsex.release.InstallerVersionTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s -- in com.mebelsex.release.InstallerVersionTest
+[INFO] Running com.mebelsex.release.ReleaseGateTest
+[INFO] Tests run: 13, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.291 s -- in com.mebelsex.release.ReleaseGateTest
+[INFO] Running com.mebelsex.release.SmokeTestGuardTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s -- in com.mebelsex.release.SmokeTestGuardTest
+[INFO] Running com.mebelsex.release.SmokeTestReportTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.mebelsex.release.SmokeTestReportTest
+[INFO] Running com.mebelsex.release.SmokeTestRunnerIntegrationTest
+2026-10-06 13:58:42.060 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.release.SmokeTestRunnerIntegrationTest]: SmokeTestRunnerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:42.069 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.release.SmokeTestRunnerIntegrationTest
+2026-10-06 13:58:42.070 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.release.SmokeTestRunnerIntegrationTest]: SmokeTestRunnerIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:42.070 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.release.SmokeTestRunnerIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:42.085 INFO  [main] c.m.r.SmokeTestRunnerIntegrationTest - Starting SmokeTestRunnerIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:42.085 INFO  [main] c.m.r.SmokeTestRunnerIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:42.153 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:42.171 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:42.201 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Starting...
+2026-10-06 13:58:42.235 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-13 - Added connection org.sqlite.jdbc4.JDBC4Connection@60bb599b
+2026-10-06 13:58:42.236 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Start completed.
+2026-10-06 13:58:42.236 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-zakazpro-smoke-0aa3759d-77a1-40bd-93ff-dc2b9fb178ec.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:42.243 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:42.244 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:42.244 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:42.249 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:42.251 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:42.256 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:42.257 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:42.268 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:42.282 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:42.284 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-zakazpro-smoke-0aa3759d-77a1-40bd-93ff-dc2b9fb178ec.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:42.335 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:42.338 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:42.350 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:42.414 INFO  [main] c.m.r.SmokeTestRunnerIntegrationTest - Started SmokeTestRunnerIntegrationTest in 0.342 seconds (process running for 18.428)
+2026-10-06 13:58:42.419 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-zakazpro-smoke-0aa3759d-77a1-40bd-93ff-dc2b9fb178ec.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:42.423 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-zakazpro-smoke-0aa3759d-77a1-40bd-93ff-dc2b9fb178ec.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:42.428 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-zakazpro-smoke-0aa3759d-77a1-40bd-93ff-dc2b9fb178ec.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:42.432 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.002s)
+2026-10-06 13:58:42.472 INFO  [main] com.mebelsex.license.LicenseService - License state BLOCKED (license.reason.missing)
+2026-10-06 13:58:42.563 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-zakazpro-smoke-0aa3759d-77a1-40bd-93ff-dc2b9fb178ec.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:42.567 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-zakazpro-smoke-0aa3759d-77a1-40bd-93ff-dc2b9fb178ec.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:42.570 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-zakazpro-smoke-0aa3759d-77a1-40bd-93ff-dc2b9fb178ec.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:42.573 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.683 s -- in com.mebelsex.release.SmokeTestRunnerIntegrationTest
+[INFO] Running com.mebelsex.report.ExcelExporterTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.726 s -- in com.mebelsex.report.ExcelExporterTest
+[INFO] Running com.mebelsex.report.ReportPeriodTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.mebelsex.report.ReportPeriodTest
+[INFO] Running com.mebelsex.report.ReportServiceIntegrationTest
+2026-10-06 13:58:43.478 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.report.ReportServiceIntegrationTest]: ReportServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:43.488 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.report.ReportServiceIntegrationTest
+2026-10-06 13:58:43.488 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.report.ReportServiceIntegrationTest]: ReportServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:43.490 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.report.ReportServiceIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:43.509 INFO  [main] c.m.r.ReportServiceIntegrationTest - Starting ReportServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:43.509 INFO  [main] c.m.r.ReportServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:43.586 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:43.617 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:43.643 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Starting...
+2026-10-06 13:58:43.648 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-14 - Added connection org.sqlite.jdbc4.JDBC4Connection@7eaa4f2d
+2026-10-06 13:58:43.649 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Start completed.
+2026-10-06 13:58:43.649 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-report-a65b201a-85ef-4ee1-9848-bfe18da891ee.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:43.654 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:43.654 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:43.655 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:43.658 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:43.660 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:43.664 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:43.666 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:43.677 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:43.689 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:43.690 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-report-a65b201a-85ef-4ee1-9848-bfe18da891ee.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:43.745 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:43.749 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:43.757 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:43.817 INFO  [main] c.m.r.ReportServiceIntegrationTest - Started ReportServiceIntegrationTest in 0.325 seconds (process running for 19.832)
+2026-10-06 13:58:43.884 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:43.885 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown initiated...
+2026-10-06 13:58:43.889 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:43.903 INFO  [main] c.m.r.ReportServiceIntegrationTest - Starting ReportServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:43.903 INFO  [main] c.m.r.ReportServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:43.971 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:43.988 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:44.019 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Starting...
+2026-10-06 13:58:44.053 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-15 - Added connection org.sqlite.jdbc4.JDBC4Connection@33f80d9d
+2026-10-06 13:58:44.058 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Start completed.
+2026-10-06 13:58:44.059 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-report-ab584d43-b1e9-46b2-879f-66bd76ee4d32.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:44.066 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:44.066 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:44.066 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:44.109 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:44.112 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:44.124 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:44.128 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.002s)
+2026-10-06 13:58:44.145 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:44.164 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:44.166 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-report-ab584d43-b1e9-46b2-879f-66bd76ee4d32.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:44.224 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:44.228 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:44.240 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:44.314 INFO  [main] c.m.r.ReportServiceIntegrationTest - Started ReportServiceIntegrationTest in 0.423 seconds (process running for 20.328)
+2026-10-06 13:58:44.389 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:44.390 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown initiated...
+2026-10-06 13:58:44.394 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:44.419 INFO  [main] c.m.r.ReportServiceIntegrationTest - Starting ReportServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:44.419 INFO  [main] c.m.r.ReportServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:44.485 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:44.501 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:44.537 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Starting...
+2026-10-06 13:58:44.585 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-16 - Added connection org.sqlite.jdbc4.JDBC4Connection@6fe7b99a
+2026-10-06 13:58:44.585 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Start completed.
+2026-10-06 13:58:44.586 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-report-850ef2fa-e4ff-4f82-881c-99eb34fdcbae.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:44.592 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:44.592 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.002s)
+2026-10-06 13:58:44.592 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:44.599 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:44.609 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:44.614 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:44.617 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.002s)
+2026-10-06 13:58:44.633 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:44.662 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:44.665 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-report-850ef2fa-e4ff-4f82-881c-99eb34fdcbae.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:44.733 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:44.737 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:44.747 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:44.840 INFO  [main] c.m.r.ReportServiceIntegrationTest - Started ReportServiceIntegrationTest in 0.443 seconds (process running for 20.854)
+2026-10-06 13:58:44.946 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:44.946 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown initiated...
+2026-10-06 13:58:44.951 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:44.969 INFO  [main] c.m.r.ReportServiceIntegrationTest - Starting ReportServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:44.970 INFO  [main] c.m.r.ReportServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:45.038 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:45.054 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:45.085 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Starting...
+2026-10-06 13:58:45.098 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-17 - Added connection org.sqlite.jdbc4.JDBC4Connection@43085d7f
+2026-10-06 13:58:45.099 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Start completed.
+2026-10-06 13:58:45.099 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-report-55f370c1-4d2f-413c-8420-73a587fe202c.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:45.104 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:45.104 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:45.104 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:45.107 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:45.110 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:45.114 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:45.116 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:45.127 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:45.140 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:45.142 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-report-55f370c1-4d2f-413c-8420-73a587fe202c.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:45.200 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:45.205 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:45.217 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:45.303 INFO  [main] c.m.r.ReportServiceIntegrationTest - Started ReportServiceIntegrationTest in 0.35 seconds (process running for 21.317)
+2026-10-06 13:58:45.371 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:45.371 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Shutdown initiated...
+2026-10-06 13:58:45.375 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:45.394 INFO  [main] c.m.r.ReportServiceIntegrationTest - Starting ReportServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:45.395 INFO  [main] c.m.r.ReportServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:45.469 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:45.488 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:45.516 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Starting...
+2026-10-06 13:58:45.549 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-18 - Added connection org.sqlite.jdbc4.JDBC4Connection@66720318
+2026-10-06 13:58:45.549 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Start completed.
+2026-10-06 13:58:45.550 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-report-e5418fef-c91d-4740-ac5a-4a5c9830cb79.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:45.553 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:45.553 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:45.553 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:45.556 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:45.559 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:45.563 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:45.565 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:45.576 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:45.590 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:45.591 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-report-e5418fef-c91d-4740-ac5a-4a5c9830cb79.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:45.645 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:45.649 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:45.661 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:45.719 INFO  [main] c.m.r.ReportServiceIntegrationTest - Started ReportServiceIntegrationTest in 0.341 seconds (process running for 21.734)
+2026-10-06 13:58:45.765 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:45.766 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Shutdown initiated...
+2026-10-06 13:58:45.769 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-18 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:45.784 INFO  [main] c.m.r.ReportServiceIntegrationTest - Starting ReportServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:45.784 INFO  [main] c.m.r.ReportServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:45.844 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:45.860 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:45.885 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Starting...
+2026-10-06 13:58:45.895 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-19 - Added connection org.sqlite.jdbc4.JDBC4Connection@707d1aa0
+2026-10-06 13:58:45.895 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Start completed.
+2026-10-06 13:58:45.896 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-report-8a801543-4a58-481a-a250-a2d16ec261bc.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:45.899 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:45.899 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:45.901 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:45.903 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:45.905 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:45.909 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:45.910 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:45.920 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:45.933 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:45.934 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-report-8a801543-4a58-481a-a250-a2d16ec261bc.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:45.981 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:45.985 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:45.997 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:46.064 INFO  [main] c.m.r.ReportServiceIntegrationTest - Started ReportServiceIntegrationTest in 0.293 seconds (process running for 22.079)
+2026-10-06 13:58:46.146 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:46.146 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Shutdown initiated...
+2026-10-06 13:58:46.150 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-19 - Shutdown completed.
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.673 s -- in com.mebelsex.report.ReportServiceIntegrationTest
+[INFO] Running com.mebelsex.report.ReportTablesTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.mebelsex.report.ReportTablesTest
+[INFO] Running com.mebelsex.settings.SettingRepositoryTest
+2026-10-06 13:58:46.156 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.settings.SettingRepositoryTest]: SettingRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:46.165 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.settings.SettingRepositoryTest
+2026-10-06 13:58:46.166 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.settings.SettingRepositoryTest]: SettingRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:46.167 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.settings.SettingRepositoryTest
+2026-10-06 13:58:46.184 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-638a1fcf-b93f-4e9a-a2b4-113c6256fe8a.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:46.187 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:46.188 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": 2
+2026-10-06 13:58:46.188 INFO  [main] o.f.core.internal.command.DbMigrate - Schema "main" is up to date. No migration necessary.
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.064 s -- in com.mebelsex.settings.SettingRepositoryTest
+[INFO] Running com.mebelsex.settings.SettingsServiceIntegrationTest
+2026-10-06 13:58:46.222 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.settings.SettingsServiceIntegrationTest]: SettingsServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:46.223 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.settings.SettingsServiceIntegrationTest
+2026-10-06 13:58:46.223 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.settings.SettingsServiceIntegrationTest]: SettingsServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:46.226 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.settings.SettingsServiceIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:46.245 INFO  [main] c.m.s.SettingsServiceIntegrationTest - Starting SettingsServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:46.245 INFO  [main] c.m.s.SettingsServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:46.308 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:46.324 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:46.357 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Starting...
+2026-10-06 13:58:46.359 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-20 - Added connection org.sqlite.jdbc4.JDBC4Connection@267247e1
+2026-10-06 13:58:46.359 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Start completed.
+2026-10-06 13:58:46.361 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-settings-950156dd-2c15-44e6-8a3d-641bc9e4cd87.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:46.364 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:46.364 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.000s)
+2026-10-06 13:58:46.364 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:46.367 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:46.369 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:46.372 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:46.374 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:46.384 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:46.395 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:46.397 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-settings-950156dd-2c15-44e6-8a3d-641bc9e4cd87.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:46.438 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:46.442 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:46.449 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:46.497 INFO  [main] c.m.s.SettingsServiceIntegrationTest - Started SettingsServiceIntegrationTest in 0.267 seconds (process running for 22.511)
+2026-10-06 13:58:46.513 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:46.514 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Shutdown initiated...
+2026-10-06 13:58:46.516 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-20 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:46.529 INFO  [main] c.m.s.SettingsServiceIntegrationTest - Starting SettingsServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:46.529 INFO  [main] c.m.s.SettingsServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:46.588 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:46.604 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:46.627 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Starting...
+2026-10-06 13:58:46.632 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-21 - Added connection org.sqlite.jdbc4.JDBC4Connection@6fa41c5e
+2026-10-06 13:58:46.632 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Start completed.
+2026-10-06 13:58:46.633 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-settings-d2f3ff45-4f01-4407-8021-e4db25cfaddc.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:46.636 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:46.637 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.000s)
+2026-10-06 13:58:46.637 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:46.640 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:46.642 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:46.647 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:46.648 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:46.660 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:46.672 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:46.674 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-settings-d2f3ff45-4f01-4407-8021-e4db25cfaddc.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:46.712 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:46.715 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:46.723 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:46.770 INFO  [main] c.m.s.SettingsServiceIntegrationTest - Started SettingsServiceIntegrationTest in 0.253 seconds (process running for 22.784)
+2026-10-06 13:58:46.773 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:46.773 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Shutdown initiated...
+2026-10-06 13:58:46.804 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-21 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:46.816 INFO  [main] c.m.s.SettingsServiceIntegrationTest - Starting SettingsServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:46.816 INFO  [main] c.m.s.SettingsServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:46.875 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:46.891 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:46.915 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Starting...
+2026-10-06 13:58:46.922 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-22 - Added connection org.sqlite.jdbc4.JDBC4Connection@30d3f58b
+2026-10-06 13:58:46.922 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Start completed.
+2026-10-06 13:58:46.922 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-settings-c87a2647-7a06-4443-86fa-754a131e7790.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:46.926 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:46.926 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:46.926 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:46.929 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:46.931 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:46.934 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:46.937 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:46.947 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:46.959 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:46.961 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-settings-c87a2647-7a06-4443-86fa-754a131e7790.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:47.008 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:47.012 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:47.022 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:47.084 INFO  [main] c.m.s.SettingsServiceIntegrationTest - Started SettingsServiceIntegrationTest in 0.279 seconds (process running for 23.099)
+2026-10-06 13:58:47.089 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:47.089 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Shutdown initiated...
+2026-10-06 13:58:47.120 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-22 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:47.136 INFO  [main] c.m.s.SettingsServiceIntegrationTest - Starting SettingsServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:47.137 INFO  [main] c.m.s.SettingsServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:47.203 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:47.222 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:47.250 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-23 - Starting...
+2026-10-06 13:58:47.283 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-23 - Added connection org.sqlite.jdbc4.JDBC4Connection@104d66db
+2026-10-06 13:58:47.283 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-23 - Start completed.
+2026-10-06 13:58:47.284 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-settings-d89d6d9c-e346-4fd0-88f5-466a1359eeb6.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:47.288 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:47.288 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:47.288 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:47.292 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:47.294 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:47.298 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:47.299 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:47.309 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:47.321 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:47.322 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-settings-d89d6d9c-e346-4fd0-88f5-466a1359eeb6.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:47.370 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:47.374 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:47.384 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:47.435 INFO  [main] c.m.s.SettingsServiceIntegrationTest - Started SettingsServiceIntegrationTest in 0.313 seconds (process running for 23.45)
+2026-10-06 13:58:47.441 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:47.441 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-23 - Shutdown initiated...
+2026-10-06 13:58:47.473 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-23 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:47.486 INFO  [main] c.m.s.SettingsServiceIntegrationTest - Starting SettingsServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:47.486 INFO  [main] c.m.s.SettingsServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:47.539 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:47.554 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:47.583 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Starting...
+2026-10-06 13:58:47.591 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-24 - Added connection org.sqlite.jdbc4.JDBC4Connection@fd7183d
+2026-10-06 13:58:47.592 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Start completed.
+2026-10-06 13:58:47.592 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-settings-648a4759-3f68-4be0-ba63-bdeada120abd.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:47.596 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:47.596 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.000s)
+2026-10-06 13:58:47.596 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:47.600 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:47.602 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:47.606 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:47.608 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:47.619 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:47.633 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:47.635 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-settings-648a4759-3f68-4be0-ba63-bdeada120abd.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:47.684 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:47.688 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:47.698 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:47.763 INFO  [main] c.m.s.SettingsServiceIntegrationTest - Started SettingsServiceIntegrationTest in 0.289 seconds (process running for 23.777)
+2026-10-06 13:58:47.778 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:47.779 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Shutdown initiated...
+2026-10-06 13:58:47.783 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-24 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:47.801 INFO  [main] c.m.s.SettingsServiceIntegrationTest - Starting SettingsServiceIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:47.801 INFO  [main] c.m.s.SettingsServiceIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:47.876 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:47.899 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:47.933 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-25 - Starting...
+2026-10-06 13:58:47.964 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-25 - Added connection org.sqlite.jdbc4.JDBC4Connection@2b0987f5
+2026-10-06 13:58:47.964 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-25 - Start completed.
+2026-10-06 13:58:47.966 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-settings-4940b85c-0c33-4340-802b-467f085f5cd0.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:47.970 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:47.970 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:47.971 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:47.975 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:47.978 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:47.983 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:47.984 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:47.996 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:48.009 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:48.011 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-settings-4940b85c-0c33-4340-802b-467f085f5cd0.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:48.056 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:48.060 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:48.069 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:48.123 INFO  [main] c.m.s.SettingsServiceIntegrationTest - Started SettingsServiceIntegrationTest in 0.338 seconds (process running for 24.138)
+2026-10-06 13:58:48.136 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:48.137 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-25 - Shutdown initiated...
+2026-10-06 13:58:48.141 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-25 - Shutdown completed.
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.922 s -- in com.mebelsex.settings.SettingsServiceIntegrationTest
+[INFO] Running com.mebelsex.settings.ThemeSettingsIntegrationTest
+2026-10-06 13:58:48.143 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.settings.ThemeSettingsIntegrationTest]: ThemeSettingsIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:48.144 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.settings.ThemeSettingsIntegrationTest
+2026-10-06 13:58:48.145 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.settings.ThemeSettingsIntegrationTest]: ThemeSettingsIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:48.146 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.settings.ThemeSettingsIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:48.166 INFO  [main] c.m.s.ThemeSettingsIntegrationTest - Starting ThemeSettingsIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:48.166 INFO  [main] c.m.s.ThemeSettingsIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:48.226 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:48.242 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:48.270 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-26 - Starting...
+2026-10-06 13:58:48.277 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-26 - Added connection org.sqlite.jdbc4.JDBC4Connection@773affee
+2026-10-06 13:58:48.278 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-26 - Start completed.
+2026-10-06 13:58:48.278 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-theme-569e07e6-5142-435e-b522-aeb768b02b6e.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:48.282 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:48.282 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:48.283 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:48.287 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:48.289 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:48.294 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:48.297 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:48.309 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:48.325 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:48.327 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-theme-569e07e6-5142-435e-b522-aeb768b02b6e.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:48.381 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:48.386 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:48.397 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:48.456 INFO  [main] c.m.s.ThemeSettingsIntegrationTest - Started ThemeSettingsIntegrationTest in 0.309 seconds (process running for 24.471)
+2026-10-06 13:58:48.462 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:48.462 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-26 - Shutdown initiated...
+2026-10-06 13:58:48.483 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-26 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:48.500 INFO  [main] c.m.s.ThemeSettingsIntegrationTest - Starting ThemeSettingsIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:48.500 INFO  [main] c.m.s.ThemeSettingsIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:48.570 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:48.586 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:48.618 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-27 - Starting...
+2026-10-06 13:58:48.652 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-27 - Added connection org.sqlite.jdbc4.JDBC4Connection@7edb6d86
+2026-10-06 13:58:48.652 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-27 - Start completed.
+2026-10-06 13:58:48.652 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-theme-ce043c34-baa2-4bb7-8cc2-f87b440ff569.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:48.657 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:48.657 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:48.657 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:48.661 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:48.664 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:48.669 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:48.672 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.002s)
+2026-10-06 13:58:48.685 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:48.698 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:48.699 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-theme-ce043c34-baa2-4bb7-8cc2-f87b440ff569.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:48.749 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:48.752 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:48.759 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:48.818 INFO  [main] c.m.s.ThemeSettingsIntegrationTest - Started ThemeSettingsIntegrationTest in 0.333 seconds (process running for 24.833)
+2026-10-06 13:58:48.852 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:48.852 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-27 - Shutdown initiated...
+2026-10-06 13:58:48.857 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-27 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:48.874 INFO  [main] c.m.s.ThemeSettingsIntegrationTest - Starting ThemeSettingsIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:48.874 INFO  [main] c.m.s.ThemeSettingsIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:48.940 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:48.959 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:48.988 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-28 - Starting...
+2026-10-06 13:58:49.020 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-28 - Added connection org.sqlite.jdbc4.JDBC4Connection@1bf5da0b
+2026-10-06 13:58:49.020 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-28 - Start completed.
+2026-10-06 13:58:49.025 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-theme-6688eaa6-5822-4b8b-b3ab-db82218b4843.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:49.029 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:49.029 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.000s)
+2026-10-06 13:58:49.029 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:49.033 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:49.035 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:49.039 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:49.041 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:49.058 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:49.076 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:49.077 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-theme-6688eaa6-5822-4b8b-b3ab-db82218b4843.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:49.130 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:49.134 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:49.143 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:49.200 INFO  [main] c.m.s.ThemeSettingsIntegrationTest - Started ThemeSettingsIntegrationTest in 0.341 seconds (process running for 25.215)
+2026-10-06 13:58:49.235 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:49.235 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-28 - Shutdown initiated...
+2026-10-06 13:58:49.241 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-28 - Shutdown completed.
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.100 s -- in com.mebelsex.settings.ThemeSettingsIntegrationTest
+[INFO] Running com.mebelsex.settings.WindowSettingsIntegrationTest
+2026-10-06 13:58:49.244 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.settings.WindowSettingsIntegrationTest]: WindowSettingsIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:49.246 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.settings.WindowSettingsIntegrationTest
+2026-10-06 13:58:49.246 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.settings.WindowSettingsIntegrationTest]: WindowSettingsIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:49.247 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.settings.WindowSettingsIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:49.264 INFO  [main] c.m.s.WindowSettingsIntegrationTest - Starting WindowSettingsIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:49.264 INFO  [main] c.m.s.WindowSettingsIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:49.337 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:49.360 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:49.392 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-29 - Starting...
+2026-10-06 13:58:49.397 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-29 - Added connection org.sqlite.jdbc4.JDBC4Connection@4efb390a
+2026-10-06 13:58:49.398 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-29 - Start completed.
+2026-10-06 13:58:49.398 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-window-0f7bfc2e-f7e5-4daa-bd74-06cb4d18cb1a.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:49.404 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:49.404 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:49.404 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:49.407 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:49.409 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:49.412 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:49.414 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:49.424 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:49.438 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:49.440 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-window-0f7bfc2e-f7e5-4daa-bd74-06cb4d18cb1a.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:49.488 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:49.492 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:49.500 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:49.560 INFO  [main] c.m.s.WindowSettingsIntegrationTest - Started WindowSettingsIntegrationTest in 0.311 seconds (process running for 25.575)
+2026-10-06 13:58:49.598 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:49.599 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-29 - Shutdown initiated...
+2026-10-06 13:58:49.604 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-29 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:49.620 INFO  [main] c.m.s.WindowSettingsIntegrationTest - Starting WindowSettingsIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:49.620 INFO  [main] c.m.s.WindowSettingsIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:49.684 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:49.702 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:49.724 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-30 - Starting...
+2026-10-06 13:58:49.736 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-30 - Added connection org.sqlite.jdbc4.JDBC4Connection@1c2c45de
+2026-10-06 13:58:49.736 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-30 - Start completed.
+2026-10-06 13:58:49.737 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-window-48b471dd-8f1c-41aa-b9d4-384707947339.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:49.740 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:49.740 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.000s)
+2026-10-06 13:58:49.741 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:49.744 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:49.746 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:49.749 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:49.751 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:49.763 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:49.776 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:49.778 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-window-48b471dd-8f1c-41aa-b9d4-384707947339.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:49.818 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:49.822 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:49.828 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:49.873 INFO  [main] c.m.s.WindowSettingsIntegrationTest - Started WindowSettingsIntegrationTest in 0.267 seconds (process running for 25.888)
+2026-10-06 13:58:49.909 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:49.910 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-30 - Shutdown initiated...
+2026-10-06 13:58:49.913 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-30 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:49.924 INFO  [main] c.m.s.WindowSettingsIntegrationTest - Starting WindowSettingsIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:49.926 INFO  [main] c.m.s.WindowSettingsIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:49.976 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:49.991 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:50.012 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-31 - Starting...
+2026-10-06 13:58:50.018 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-31 - Added connection org.sqlite.jdbc4.JDBC4Connection@7506825d
+2026-10-06 13:58:50.019 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-31 - Start completed.
+2026-10-06 13:58:50.019 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-window-70204ed1-b711-4da5-89b3-ad5cabea1011.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:50.023 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:50.023 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.001s)
+2026-10-06 13:58:50.023 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:50.026 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:50.028 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:50.032 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:50.034 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.001s)
+2026-10-06 13:58:50.044 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:50.056 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:50.057 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-window-70204ed1-b711-4da5-89b3-ad5cabea1011.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:50.094 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:50.098 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:50.105 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:50.150 INFO  [main] c.m.s.WindowSettingsIntegrationTest - Started WindowSettingsIntegrationTest in 0.234 seconds (process running for 26.164)
+2026-10-06 13:58:50.154 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:50.154 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-31 - Shutdown initiated...
+2026-10-06 13:58:50.184 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-31 - Shutdown completed.
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.941 s -- in com.mebelsex.settings.WindowSettingsIntegrationTest
+[INFO] Running com.mebelsex.ui.AlertHelperTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.305 s -- in com.mebelsex.ui.AlertHelperTest
+[INFO] Running com.mebelsex.ui.AppIconsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.033 s -- in com.mebelsex.ui.AppIconsTest
+[INFO] Running com.mebelsex.ui.ApplicationCssTest
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in com.mebelsex.ui.ApplicationCssTest
+[INFO] Running com.mebelsex.ui.CharacterEncodingTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.mebelsex.ui.CharacterEncodingTest
+[INFO] Running com.mebelsex.ui.components.MoneyInputFormatterTest
+[INFO] Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.152 s -- in com.mebelsex.ui.components.MoneyInputFormatterTest
+[INFO] Running com.mebelsex.ui.components.MoneyParserTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in com.mebelsex.ui.components.MoneyParserTest
+[INFO] Running com.mebelsex.ui.components.NumericFieldListenerScanTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in com.mebelsex.ui.components.NumericFieldListenerScanTest
+[INFO] Running com.mebelsex.ui.components.QuantityInputFormatterTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.017 s -- in com.mebelsex.ui.components.QuantityInputFormatterTest
+[INFO] Running com.mebelsex.ui.components.QuantityParserTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s -- in com.mebelsex.ui.components.QuantityParserTest
+[INFO] Running com.mebelsex.ui.components.SignedMoneyInputFormatterTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in com.mebelsex.ui.components.SignedMoneyInputFormatterTest
+[INFO] Running com.mebelsex.ui.components.SignedMoneyParserTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.mebelsex.ui.components.SignedMoneyParserTest
+[INFO] Running com.mebelsex.ui.customers.CustomersSearchRaceTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.878 s -- in com.mebelsex.ui.customers.CustomersSearchRaceTest
+[INFO] Running com.mebelsex.ui.EnumLabelMappingTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.mebelsex.ui.EnumLabelMappingTest
+[INFO] Running com.mebelsex.ui.EnumLabelsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in com.mebelsex.ui.EnumLabelsTest
+[INFO] Running com.mebelsex.ui.FxmlFilesTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.131 s -- in com.mebelsex.ui.FxmlFilesTest
+[INFO] Running com.mebelsex.ui.I18NValidationTest
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.042 s -- in com.mebelsex.ui.I18NValidationTest
+[INFO] Running com.mebelsex.ui.NoHardcodedColorsTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in com.mebelsex.ui.NoHardcodedColorsTest
+[INFO] Running com.mebelsex.ui.ThemeTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.mebelsex.ui.ThemeTest
+[INFO] Running com.mebelsex.ui.ThemeTokensTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s -- in com.mebelsex.ui.ThemeTokensTest
+[INFO] Running com.mebelsex.ui.ThemeWiringTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in com.mebelsex.ui.ThemeWiringTest
+[INFO] Running com.mebelsex.ui.UiDoesNotImportEntityAssociationsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in com.mebelsex.ui.UiDoesNotImportEntityAssociationsTest
+[INFO] Running com.mebelsex.ui.UiStringsTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.012 s -- in com.mebelsex.ui.UiStringsTest
+[INFO] Running com.mebelsex.ui.WindowGeometryTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s -- in com.mebelsex.ui.WindowGeometryTest
+[INFO] Running com.mebelsex.work.WorkLogIntegrationTest
+2026-10-06 13:58:51.971 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.work.WorkLogIntegrationTest]: WorkLogIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:52.003 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.work.WorkLogIntegrationTest
+2026-10-06 13:58:52.005 INFO  [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.mebelsex.work.WorkLogIntegrationTest]: WorkLogIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-10-06 13:58:52.008 INFO  [main] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.mebelsex.MebelSexApplication for test class com.mebelsex.work.WorkLogIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.1)
+
+2026-10-06 13:58:52.064 INFO  [main] c.m.work.WorkLogIntegrationTest - Starting WorkLogIntegrationTest using Java 17.0.13 with PID 27360 (started by imomn in C:\Users\imomn\OneDrive\Desktop\mebelsex)
+2026-10-06 13:58:52.065 INFO  [main] c.m.work.WorkLogIntegrationTest - The following 1 profile is active: "test"
+2026-10-06 13:58:52.260 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-06 13:58:52.296 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 12 JPA repository interfaces.
+2026-10-06 13:58:52.411 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-32 - Starting...
+2026-10-06 13:58:52.446 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-32 - Added connection org.sqlite.jdbc4.JDBC4Connection@627f32b0
+2026-10-06 13:58:52.446 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-32 - Start completed.
+2026-10-06 13:58:52.447 INFO  [main] org.flywaydb.core.FlywayExecutor - Database: jdbc:sqlite:target/test-mebelsex-work-939b15a9-25ba-4129-9098-8ba0cf4eabb6.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000 (SQLite 3.53)
+2026-10-06 13:58:52.458 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "main"."flyway_schema_history" does not exist yet
+2026-10-06 13:58:52.458 INFO  [main] o.f.core.internal.command.DbValidate - Successfully validated 2 migrations (execution time 00:00.003s)
+2026-10-06 13:58:52.459 INFO  [main] o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "main"."flyway_schema_history" ...
+2026-10-06 13:58:52.469 INFO  [main] o.f.core.internal.command.DbMigrate - Current version of schema "main": << Empty Schema >>
+2026-10-06 13:58:52.476 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "1 - init"
+2026-10-06 13:58:52.487 INFO  [main] o.f.core.internal.command.DbMigrate - Migrating schema "main" to version "2 - order date"
+2026-10-06 13:58:52.491 INFO  [main] o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "main", now at version v2 (execution time 00:00.005s)
+2026-10-06 13:58:52.521 INFO  [main] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-06 13:58:52.562 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-06 13:58:52.566 INFO  [main] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:sqlite:target/test-mebelsex-work-939b15a9-25ba-4129-9098-8ba0cf4eabb6.db?foreign_keys=on&journal_mode=wal&busy_timeout=5000]
+	Database driver: SQLite JDBC
+	Database dialect: SQLiteDialect
+	Database version: 3.53.4
+	Default catalog/schema: undefined/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: SERIALIZABLE [default SERIALIZABLE]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-06 13:58:52.744 INFO  [main] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-06 13:58:52.751 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-06 13:58:52.790 INFO  [main] com.mebelsex.backup.BackupScheduler - Backup scheduler disabled
+2026-10-06 13:58:52.976 INFO  [main] c.m.work.WorkLogIntegrationTest - Started WorkLogIntegrationTest in 0.961 seconds (process running for 28.991)
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.386 s -- in com.mebelsex.work.WorkLogIntegrationTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 443, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.1:jar (default-jar) @ mebelsex ---
+[INFO] Building jar: C:\Users\imomn\OneDrive\Desktop\mebelsex\target\mebelsex-1.0.0.jar
+[INFO] 
+[INFO] --- spring-boot:4.1.1:repackage (repackage) @ mebelsex ---
+[INFO] Attaching repackaged archive C:\Users\imomn\OneDrive\Desktop\mebelsex\target\mebelsex-1.0.0-exec.jar with classifier exec
+[INFO] 
+[INFO] --- dependency:3.10.0:copy-dependencies (copy-runtime-dependencies) @ mebelsex ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  39.813 s
+[INFO] Finished at: 2026-10-06T13:58:56+05:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.customers.CustomerFormController" spacing="16" prefWidth="560">
+    <VBox spacing="4">
+        <Label text="%ui.customer.name" styleClass="muted-text"/>
+        <TextField fx:id="nameField" promptText="%ui.customer.name_placeholder" maxWidth="Infinity"/>
+    </VBox>
+    
+    <VBox spacing="4">
+        <Label text="%ui.customer.phone" styleClass="muted-text"/>
+        <TextField fx:id="phoneField" promptText="+998" maxWidth="Infinity"/>
+    </VBox>
+    
+    <VBox spacing="4">
+        <Label text="%ui.customer.address" styleClass="muted-text"/>
+        <TextField fx:id="addressField" promptText="%ui.customer.address_placeholder" maxWidth="Infinity"/>
+    </VBox>
+    
+    <VBox spacing="4">
+        <Label text="%ui.customer.notes" styleClass="muted-text"/>
+        <TextArea fx:id="notesField" prefRowCount="3" promptText="%ui.customer.notes_placeholder" maxWidth="Infinity"/>
+    </VBox>
+    
+    <Label fx:id="errorLabel" styleClass="error-label" visible="false" managed="false"/>
+    
+    <HBox spacing="12" alignment="CENTER_RIGHT" style="-fx-padding: 16 0 0 0;">
+        <Button fx:id="cancelBtn" text="%ui.cancel" styleClass="secondary-button" onAction="#handleCancel" minWidth="-1" prefWidth="-1" maxWidth="-1"/>
+        <Button fx:id="saveBtn" text="%ui.save" styleClass="primary-button" onAction="#handleSave" minWidth="-1" prefWidth="-1" maxWidth="-1"/>
+    </HBox>
+</VBox>

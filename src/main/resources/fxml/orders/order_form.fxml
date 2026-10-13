@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import javafx.geometry.Insets?>
+<?import com.mebelsex.ui.components.MoneyField?>
+<?import com.mebelsex.ui.components.UzDatePicker?>
+
+<VBox spacing="16" prefWidth="560" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.orders.OrderFormController">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <FontIcon iconLiteral="fth-shopping-cart" iconSize="24" styleClass="accent-icon"/>
+        <Label fx:id="titleLabel" text="%ui.new_order" styleClass="page-title"/>
+    </HBox>
+    <Separator/>
+
+    <!-- Main Form Fields -->
+    <GridPane hgap="16" vgap="16">
+        <columnConstraints>
+            <ColumnConstraints minWidth="150" prefWidth="150" maxWidth="150" halignment="RIGHT"/>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="280"/>
+        </columnConstraints>
+
+        <Label text="%order.customer" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="form-label"/>
+        <ComboBox fx:id="customerCombo" promptText="%order.customer.select" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="%order.product" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="form-label"/>
+        <TextField fx:id="productField" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="%order.price" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="form-label"/>
+        <MoneyField fx:id="priceField" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="%order.orderDate" GridPane.rowIndex="3" GridPane.columnIndex="0" styleClass="form-label"/>
+        <UzDatePicker fx:id="orderDateField" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="%order.dueDate" GridPane.rowIndex="4" GridPane.columnIndex="0" styleClass="form-label"/>
+        <UzDatePicker fx:id="dueDateField" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="%order.notes" GridPane.rowIndex="5" GridPane.columnIndex="0" styleClass="form-label" GridPane.valignment="TOP"/>
+        <TextArea fx:id="notesField" prefRowCount="3" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <!-- Already paid info (shown only when editing) -->
+    <Label fx:id="paidInfoLabel" styleClass="muted-text" wrapText="true" visible="false" managed="false"/>
+
+    <!-- Advance Payment Section (Hidden on Edit) -->
+    <VBox fx:id="advanceSection" spacing="12" styleClass="advance-section">
+        <CheckBox fx:id="advanceCheck" text="%order.advance.enable" style="-fx-font-weight: bold;"/>
+        
+        <GridPane fx:id="advanceGrid" hgap="16" vgap="12" visible="false" managed="false">
+            <columnConstraints>
+                <ColumnConstraints minWidth="130" prefWidth="130" maxWidth="130" halignment="RIGHT"/>
+                <ColumnConstraints hgrow="ALWAYS" minWidth="280"/>
+            </columnConstraints>
+
+            <Label text="%payment.amount" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="form-label"/>
+            <MoneyField fx:id="advanceAmountField" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="%payment.method" GridPane.rowIndex="1" GridPane.columnIndex="0" styleClass="form-label"/>
+            <ComboBox fx:id="advanceMethodCombo" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="%payment.date" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="form-label"/>
+            <UzDatePicker fx:id="advanceDateField" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        </GridPane>
+    </VBox>
+
+    <Separator/>
+
+    <!-- Actions -->
+    <HBox alignment="CENTER_RIGHT" spacing="12">
+        <Button text="%action.cancel" onAction="#handleCancel" styleClass="secondary-button" minWidth="100"/>
+        <Button text="%action.save" onAction="#handleSave" styleClass="primary-button" minWidth="120"/>
+    </HBox>
+</VBox>

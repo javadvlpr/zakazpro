@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane prefWidth="1200" prefHeight="800" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.MainController">
+    <!-- SIDEBAR -->
+    <left>
+        <VBox minWidth="240" prefWidth="240" maxWidth="240" styleClass="sidebar">
+        <!-- Logo/Title -->
+        <HBox alignment="CENTER_LEFT" spacing="12">
+            <padding><Insets top="24" right="16" bottom="32" left="16"/></padding>
+            <FontIcon iconLiteral="fth-package" iconSize="28" styleClass="sidebar-logo-icon"/>
+            <Label text="%app.title" styleClass="app-title"/>
+        </HBox>
+        
+        <!-- Menu Items -->
+        <VBox spacing="4" VBox.vgrow="ALWAYS">
+            <HBox fx:id="menuHome" styleClass="sidebar-item" spacing="12" alignment="CENTER_LEFT">
+                <FontIcon iconLiteral="fth-home" iconSize="20"/>
+                <Label text="%menu.home"/>
+            </HBox>
+            <HBox fx:id="menuOrders" styleClass="sidebar-item" spacing="12" alignment="CENTER_LEFT">
+                <FontIcon iconLiteral="fth-layers" iconSize="20"/>
+                <Label text="%menu.orders"/>
+            </HBox>
+            <HBox fx:id="menuCustomers" styleClass="sidebar-item" spacing="12" alignment="CENTER_LEFT">
+                <FontIcon iconLiteral="fth-users" iconSize="20"/>
+                <Label text="%menu.customers"/>
+            </HBox>
+            <HBox fx:id="menuEmployees" styleClass="sidebar-item" spacing="12" alignment="CENTER_LEFT">
+                <FontIcon iconLiteral="fth-briefcase" iconSize="20"/>
+                <Label text="%menu.employees"/>
+            </HBox>
+            <HBox fx:id="menuReports" styleClass="sidebar-item" spacing="12" alignment="CENTER_LEFT">
+                <FontIcon iconLiteral="fth-bar-chart-2" iconSize="20"/>
+                <Label text="%menu.reports"/>
+            </HBox>
+            <HBox fx:id="menuCatalog" styleClass="sidebar-item" spacing="12" alignment="CENTER_LEFT">
+                <FontIcon iconLiteral="fth-grid" iconSize="20"/>
+                <Label text="%menu.catalog"/>
+            </HBox>
+            <HBox fx:id="menuSettings" styleClass="sidebar-item" spacing="12" alignment="CENTER_LEFT">
+                <FontIcon iconLiteral="fth-settings" iconSize="20"/>
+                <Label text="%menu.settings"/>
+            </HBox>
+        </VBox>
+        
+        <!-- Version Footer -->
+        <VBox alignment="CENTER" spacing="8">
+            <padding><Insets bottom="16"/></padding>
+            <Button fx:id="themeToggleButton" onAction="#handleToggleTheme" styleClass="sidebar-theme-button">
+                <graphic>
+                    <FontIcon fx:id="themeToggleIcon" iconLiteral="fth-moon" iconSize="18"/>
+                </graphic>
+            </Button>
+            <Label fx:id="versionLabel" text="v1.0.0" styleClass="sidebar-version"/>
+        </VBox>
+        </VBox>
+    </left>
+    
+    <!-- MAIN CONTENT AREA -->
+    <center>
+        <VBox>
+            <!-- License banner: hidden unless the license is expiring soon or read-only -->
+            <HBox fx:id="licenseBanner" styleClass="license-banner" managed="false" visible="false"
+                  alignment="CENTER_LEFT" spacing="12">
+                <padding><Insets top="10" right="16" bottom="10" left="16"/></padding>
+                <Label fx:id="licenseBannerLabel" wrapText="true" minWidth="0" HBox.hgrow="ALWAYS"/>
+                <Button fx:id="licenseBannerAction" onAction="#handleOpenLicenseSettings" minWidth="0"/>
+            </HBox>
+            <StackPane fx:id="contentArea" VBox.vgrow="ALWAYS"/>
+        </VBox>
+    </center>
+
+</BorderPane>

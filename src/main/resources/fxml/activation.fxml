@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox spacing="16" minWidth="560" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.ActivationController">
+    <padding>
+        <Insets top="28" right="28" bottom="24" left="28"/>
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <FontIcon iconLiteral="fth-lock" iconSize="26" styleClass="accent-icon"/>
+        <Label text="%license.activation.title" styleClass="page-title"/>
+    </HBox>
+
+    <Label text="%license.activation.intro" wrapText="true" minWidth="0" styleClass="muted-text"/>
+
+    <VBox spacing="6" styleClass="card">
+        <Label text="%license.activation.machine_label" styleClass="form-label"/>
+        <HBox alignment="CENTER_LEFT" spacing="8">
+            <TextField fx:id="machineField" editable="false" minWidth="0" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+            <Button fx:id="copyButton" text="%license.activation.copy" onAction="#handleCopy" minWidth="0"/>
+        </HBox>
+        <Label fx:id="copiedLabel" text="%license.activation.copied" managed="false" visible="false" styleClass="stat-card-profit"/>
+    </VBox>
+
+    <Label fx:id="errorLabel" wrapText="true" minWidth="0" styleClass="stat-card-debt"/>
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Button fx:id="chooseButton" text="%license.activation.choose" onAction="#handleChoose" styleClass="primary-button" minWidth="0"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="exitButton" text="%license.activation.exit" onAction="#handleExit" minWidth="0"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import com.mebelsex.ui.components.SearchField?>
+
+<VBox spacing="16" stylesheets="@../css/application.css" styleClass="content-area" maxWidth="Infinity" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.catalog.CatalogController">
+
+    <Label text="%menu.catalog" styleClass="page-title"/>
+
+    <TabPane fx:id="tabs" VBox.vgrow="ALWAYS">
+        <Tab text="%expense.catalog.expenses_tab" closable="false">
+            <HBox spacing="16" style="-fx-padding: 12 0 0 0;" VBox.vgrow="ALWAYS">
+                <!-- Categories -->
+                <VBox styleClass="card" spacing="12" prefWidth="320" minWidth="240">
+                    <HBox alignment="CENTER_LEFT" spacing="8">
+                        <Label text="%expense.catalog.categories" styleClass="section-title"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Button fx:id="newCategoryButton" text="%expense.catalog.new_category" onAction="#handleNewCategory" styleClass="primary-button"/>
+                    </HBox>
+                    <CheckBox fx:id="showInactiveCategories" text="%expense.catalog.show_inactive"/>
+                    <ListView fx:id="categoryList" VBox.vgrow="ALWAYS" prefHeight="320" minWidth="0"/>
+                    <HBox spacing="8">
+                        <Button fx:id="renameCategoryButton" text="%expense.catalog.rename" onAction="#handleRenameCategory" styleClass="secondary-button"/>
+                        <Button fx:id="toggleCategoryButton" onAction="#handleToggleCategory" styleClass="secondary-button"/>
+                    </HBox>
+                </VBox>
+
+                <!-- Items -->
+                <VBox styleClass="card" spacing="12" HBox.hgrow="ALWAYS" minWidth="0">
+                    <HBox alignment="CENTER_LEFT" spacing="8">
+                        <Label text="%expense.catalog.items" styleClass="section-title"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <SearchField fx:id="itemSearchField" promptText="%expense.catalog.search_items" prefWidth="220"/>
+                        <Button fx:id="newItemButton" text="%expense.catalog.new_item" onAction="#handleNewItem" styleClass="primary-button"/>
+                    </HBox>
+                    <TableView fx:id="itemTable" VBox.vgrow="ALWAYS" minWidth="200">
+                        <columns>
+                            <TableColumn fx:id="colItemName" text="%expense.item.name" prefWidth="220"/>
+                            <TableColumn fx:id="colItemUnit" text="%expense.item.unit" prefWidth="120"/>
+                            <TableColumn fx:id="colItemPrice" text="%expense.item.default_price" prefWidth="160" styleClass="money-col"/>
+                            <TableColumn fx:id="colItemStatus" text="%order.status" prefWidth="120"/>
+                        </columns>
+                        <placeholder>
+                            <Label text="%expense.catalog.empty_items" styleClass="muted-text"/>
+                        </placeholder>
+                    </TableView>
+                    <HBox spacing="8">
+                        <Button fx:id="editItemButton" text="%expense.catalog.edit_item" onAction="#handleEditItem" styleClass="secondary-button"/>
+                        <Button fx:id="toggleItemButton" onAction="#handleToggleItem" styleClass="secondary-button"/>
+                    </HBox>
+                </VBox>
+            </HBox>
+        </Tab>
+        <Tab text="%operation.catalog.tab" closable="false">
+            <VBox styleClass="card" spacing="12" style="-fx-padding: 12 0 0 0;" VBox.vgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label text="%operation.catalog.tab" styleClass="section-title"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <SearchField fx:id="operationSearchField" promptText="%operation.catalog.search" prefWidth="220"/>
+                    <Button fx:id="newOperationButton" text="%operation.catalog.new" onAction="#handleNewOperation" styleClass="primary-button"/>
+                </HBox>
+                <CheckBox fx:id="showInactiveOperations" text="%expense.catalog.show_inactive"/>
+                <TableView fx:id="operationTable" VBox.vgrow="ALWAYS" minWidth="200">
+                    <columns>
+                        <TableColumn fx:id="colOperationName" text="%operation.name" prefWidth="260"/>
+                        <TableColumn fx:id="colOperationUnit" text="%operation.unit" prefWidth="140"/>
+                        <TableColumn fx:id="colOperationPrice" text="%operation.default_price" prefWidth="180" styleClass="money-col"/>
+                        <TableColumn fx:id="colOperationStatus" text="%order.status" prefWidth="120"/>
+                    </columns>
+                    <placeholder>
+                        <Label text="%operation.catalog.empty" styleClass="muted-text"/>
+                    </placeholder>
+                </TableView>
+                <HBox spacing="8">
+                    <Button fx:id="editOperationButton" text="%expense.catalog.edit_item" onAction="#handleEditOperation" styleClass="secondary-button"/>
+                    <Button fx:id="toggleOperationButton" onAction="#handleToggleOperation" styleClass="secondary-button"/>
+                </HBox>
+            </VBox>
+        </Tab>
+        <Tab text="%position.catalog.tab" closable="false">
+            <VBox styleClass="card" spacing="12" style="-fx-padding: 12 0 0 0;" VBox.vgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label text="%position.catalog.tab" styleClass="section-title"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <SearchField fx:id="positionSearchField" promptText="%position.catalog.search" prefWidth="220"/>
+                    <Button fx:id="newPositionButton" text="%position.catalog.new" onAction="#handleNewPosition" styleClass="primary-button"/>
+                </HBox>
+                <CheckBox fx:id="showInactivePositions" text="%expense.catalog.show_inactive"/>
+                <TableView fx:id="positionTable" VBox.vgrow="ALWAYS" minWidth="200">
+                    <columns>
+                        <TableColumn fx:id="colPositionName" text="%position.name" prefWidth="300"/>
+                        <TableColumn fx:id="colPositionCount" text="%position.col.employees" prefWidth="160" styleClass="money-col"/>
+                        <TableColumn fx:id="colPositionStatus" text="%order.status" prefWidth="120"/>
+                    </columns>
+                    <placeholder>
+                        <Label text="%position.catalog.empty" styleClass="muted-text"/>
+                    </placeholder>
+                </TableView>
+                <HBox spacing="8">
+                    <Button fx:id="renamePositionButton" text="%expense.catalog.rename" onAction="#handleRenamePosition" styleClass="secondary-button"/>
+                    <Button fx:id="togglePositionButton" onAction="#handleTogglePosition" styleClass="secondary-button"/>
+                </HBox>
+            </VBox>
+        </Tab>
+    </TabPane>
+</VBox>

@@ -1,0 +1,713 @@
+.root {
+    /* App colour tokens (light theme). The dark theme overrides these in .root.dark below. */
+    -mx-bg: #F3F6FB;
+    -mx-surface: #FFFFFF;
+    -mx-surface-alt: #F3F6FB;
+    -mx-border: #E5E7EB;
+    -mx-text: #1F2937;
+    -mx-muted: #6B7280;
+    -mx-heading: #172554;
+    -mx-primary: #1E3A8A;
+    -mx-primary-hover: #1D4ED8;
+    -mx-primary-dark: #172554;
+    -mx-on-primary: #FFFFFF;
+    -mx-sidebar-start: #172554;
+    -mx-sidebar-end: #1E3A8A;
+    -mx-sidebar-text: rgba(255, 255, 255, 0.85);
+    -mx-sidebar-hover: rgba(255, 255, 255, 0.1);
+    -mx-sidebar-active: rgba(255, 255, 255, 0.2);
+    -mx-sidebar-icon: #FFFFFF;
+    -mx-sidebar-version: rgba(255, 255, 255, 0.5);
+    -mx-profit: #15803D;
+    -mx-debt: #B91C1C;
+    -mx-focus: #93C5FD;
+    -mx-row-hover: #F3F6FB;
+    -mx-row-selected: #EFF6FF;
+    -mx-row-overdue: #FFF5F5;
+    -mx-row-overdue-selected: #FEE2E2;
+    -mx-overdue-text: #DC2626;
+    -mx-voided: #F3F4F6;
+    -mx-voided-text: #8A919D;
+    -mx-disabled-surface: #F1F5F9;
+    -mx-disabled-text: #6B7280;
+    -mx-scroll-thumb: #E5E7EB;
+    -mx-scroll-thumb-hover: #6B7280;
+    -mx-danger-hover-bg: #FEF2F2;
+    -mx-advance-bg: #F8FAFC;
+    -mx-warn-bg: #FEF2F2;
+    -mx-warn-text: #991B1B;
+    -mx-info-bg: #EFF6FF;
+    -mx-info-text: #1E40AF;
+    -mx-icon-muted: #9CA3AF;
+    -mx-icon-accent: #4338CA;
+    -mx-badge-new-bg: #E0E7FF;
+    -mx-badge-new-fg: #3730A3;
+    -mx-badge-in-production-bg: #FEF3C7;
+    -mx-badge-in-production-fg: #92400E;
+    -mx-badge-ready-bg: #D1FAE5;
+    -mx-badge-ready-fg: #065F46;
+    -mx-badge-delivered-bg: #DBEAFE;
+    -mx-badge-delivered-fg: #1E40AF;
+    -mx-badge-completed-bg: #DCFCE7;
+    -mx-badge-completed-fg: #166534;
+    -mx-badge-cancelled-bg: #FEE2E2;
+    -mx-badge-cancelled-fg: #991B1B;
+    -mx-banner-readonly-bg: #FEE2E2;
+    -mx-banner-readonly-text: #991B1B;
+    -mx-banner-warning-bg: #FEF3C7;
+    -mx-banner-warning-text: #92400E;
+
+    -fx-background: -mx-bg;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: -mx-text;
+    -fx-background-color: -mx-bg;
+}
+
+/* Dark theme (Tungi rejim). Overrides every light token and the Modena keys, so
+   unstyled parts (scroll bars, popups, calendar, context menus, tooltips) follow. */
+.root.dark {
+    -mx-bg: #0F172A;
+    -mx-surface: #1E293B;
+    -mx-surface-alt: #172033;
+    -mx-border: #334155;
+    -mx-text: #E5E7EB;
+    -mx-muted: #94A3B8;
+    -mx-heading: #E2E8F0;
+    -mx-primary: #2563EB;
+    -mx-primary-hover: #3B82F6;
+    -mx-primary-dark: #1D4ED8;
+    -mx-on-primary: #FFFFFF;
+    -mx-sidebar-start: #0B1220;
+    -mx-sidebar-end: #111C33;
+    -mx-sidebar-text: #CBD5E1;
+    -mx-sidebar-hover: rgba(255, 255, 255, 0.08);
+    -mx-sidebar-active: rgba(255, 255, 255, 0.14);
+    -mx-sidebar-icon: #E2E8F0;
+    -mx-sidebar-version: rgba(255, 255, 255, 0.4);
+    -mx-profit: #4ADE80;
+    -mx-debt: #F87171;
+    -mx-focus: #60A5FA;
+    -mx-row-hover: #243349;
+    -mx-row-selected: #1E3A6D;
+    -mx-row-overdue: #3B1F26;
+    -mx-row-overdue-selected: #4A2530;
+    -mx-overdue-text: #FCA5A5;
+    -mx-voided: #18222F;
+    -mx-voided-text: #64748B;
+    -mx-disabled-surface: #18222F;
+    -mx-disabled-text: #64748B;
+    -mx-scroll-thumb: #475569;
+    -mx-scroll-thumb-hover: #64748B;
+    -mx-danger-hover-bg: #3B1F26;
+    -mx-advance-bg: #172033;
+    -mx-warn-bg: #3B1F26;
+    -mx-warn-text: #FCA5A5;
+    -mx-info-bg: #1E3A6D;
+    -mx-info-text: #BFDBFE;
+    -mx-icon-muted: #94A3B8;
+    -mx-icon-accent: #60A5FA;
+    -mx-badge-new-bg: #1E3A6D;
+    -mx-badge-new-fg: #BFDBFE;
+    -mx-badge-in-production-bg: #3D2E12;
+    -mx-badge-in-production-fg: #FCD34D;
+    -mx-badge-ready-bg: #123528;
+    -mx-badge-ready-fg: #6EE7B7;
+    -mx-badge-delivered-bg: #172E4D;
+    -mx-badge-delivered-fg: #93C5FD;
+    -mx-badge-completed-bg: #14321F;
+    -mx-badge-completed-fg: #86EFAC;
+    -mx-badge-cancelled-bg: #3B1F26;
+    -mx-badge-cancelled-fg: #FCA5A5;
+    -mx-banner-readonly-bg: #3B1F26;
+    -mx-banner-readonly-text: #FCA5A5;
+    -mx-banner-warning-bg: #3D2E12;
+    -mx-banner-warning-text: #FCD34D;
+
+    -fx-base: #1E293B;
+    -fx-background: #0F172A;
+    -fx-control-inner-background: #1E293B;
+    -fx-text-base-color: #E5E7EB;
+    -fx-text-background-color: #E5E7EB;
+    -fx-accent: #2563EB;
+    -fx-focus-color: #60A5FA;
+    -fx-faint-focus-color: #60A5FA33;
+    -fx-box-border: #334155;
+}
+
+/* License banner at the top of the content area (style classes set by MainController) */
+.license-banner-readonly {
+    -fx-background-color: -mx-banner-readonly-bg;
+    -fx-border-color: -mx-border;
+    -fx-border-width: 0 0 1 0;
+}
+
+.license-banner-readonly .label {
+    -fx-text-fill: -mx-banner-readonly-text;
+}
+
+.license-banner-warning {
+    -fx-background-color: -mx-banner-warning-bg;
+    -fx-border-color: -mx-border;
+    -fx-border-width: 0 0 1 0;
+}
+
+.license-banner-warning .label {
+    -fx-text-fill: -mx-banner-warning-text;
+}
+
+/* Base resets */
+.scroll-pane {
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.scroll-pane>.viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane,
+.scroll-pane:focused {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical,
+.scroll-bar:horizontal {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical>.thumb,
+.scroll-bar:horizontal>.thumb {
+    -fx-background-color: -mx-scroll-thumb;
+    -fx-background-radius: 4px;
+}
+
+.scroll-bar:vertical>.thumb:hover,
+.scroll-bar:horizontal>.thumb:hover {
+    -fx-background-color: -mx-scroll-thumb-hover;
+}
+
+/* Typography Helpers */
+.page-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -mx-heading;
+}
+
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.muted-text {
+    -fx-text-fill: -mx-muted;
+}
+
+/* Content Area */
+.content-area {
+    -fx-background-color: -mx-bg;
+    -fx-padding: 24px;
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: linear-gradient(to bottom, -mx-sidebar-start, -mx-sidebar-end);
+    /* JavaFX bug fallback, primary-dark over primary */
+}
+
+.sidebar .app-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -mx-sidebar-icon;
+}
+
+.sidebar-item {
+    -fx-padding: 12px 16px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 0 3px;
+    -fx-border-color: transparent;
+    -fx-alignment: center-left;
+}
+
+.sidebar-item .label {
+    -fx-text-fill: -mx-sidebar-text;
+}
+
+.sidebar-item:hover {
+    -fx-background-color: -mx-sidebar-hover;
+    -fx-text-fill: -mx-sidebar-icon;
+}
+
+.sidebar-item.active {
+    -fx-background-color: -mx-sidebar-active;
+    -fx-border-color: -mx-sidebar-icon;
+}
+
+.sidebar-item.active .label {
+    -fx-text-fill: -mx-sidebar-icon;
+    -fx-font-weight: bold;
+}
+
+.sidebar-item .ikonli-font-icon {
+    -fx-fill: -mx-sidebar-icon;
+    -fx-icon-color: -mx-sidebar-icon;
+}
+
+/* Cards */
+.card {
+    -fx-background-color: -mx-surface;
+    -fx-background-radius: 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 10, 0.2, 0, 4);
+    -fx-padding: 24px;
+    /* "card padding 20-24px" requested */
+}
+
+/* Stat Card Overrides */
+.stat-card-title {
+    -fx-text-fill: -mx-muted;
+    -fx-font-size: 14px;
+}
+
+.stat-card-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.stat-card-profit {
+    -fx-text-fill: -mx-profit;
+}
+
+.stat-card-debt {
+    -fx-text-fill: -mx-debt;
+}
+
+.stat-card-info {
+    -fx-text-fill: -mx-primary;
+}
+
+/* Buttons */
+.button {
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-padding: 8px 16px;
+    -fx-min-height: 40px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    /* No semibold in raw CSS natively effectively, so using bold */
+}
+
+.primary-button {
+    -fx-background-color: -mx-primary;
+    -fx-text-fill: -mx-on-primary;
+}
+
+.primary-button:hover {
+    -fx-background-color: -mx-primary-hover;
+}
+
+.primary-button:pressed {
+    -fx-background-color: -mx-primary-dark;
+}
+
+.primary-button:disabled {
+    -fx-opacity: 0.5;
+}
+
+.secondary-button {
+    -fx-background-color: -mx-surface;
+    -fx-text-fill: -mx-primary;
+    -fx-border-color: -mx-primary;
+    -fx-border-radius: 8px;
+    -fx-border-width: 1px;
+}
+
+.secondary-button:hover {
+    -fx-background-color: -mx-bg;
+}
+
+.secondary-button:pressed {
+    -fx-background-color: -mx-border;
+}
+
+.danger-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -mx-debt;
+    -fx-border-color: -mx-debt;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+}
+
+.danger-button:hover {
+    -fx-background-color: -mx-danger-hover-bg;
+}
+
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-padding: 8px;
+}
+
+.icon-button:hover {
+    -fx-background-color: -mx-border;
+}
+
+/* Form Elements */
+.text-field,
+.text-area {
+    -fx-background-color: -mx-surface;
+    -fx-border-color: -mx-border;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-min-height: 40px;
+    -fx-padding: 8px 12px;
+}
+
+/* ComboBox / DatePicker own the border and height; padding is on the inner parts */
+.combo-box,
+.date-picker {
+    -fx-background-color: -mx-surface;
+    -fx-border-color: -mx-border;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-min-height: 40px;
+    -fx-padding: 0;
+}
+
+.text-area {
+    -fx-padding: 0;
+}
+
+.text-area .content {
+    -fx-padding: 8px 12px;
+    -fx-background-color: transparent;
+}
+
+/* Typed text and placeholder must stay readable in every theme: Modena derives
+   the prompt colour from -fx-control-inner-background, which is dark in the dark theme. */
+.text-input {
+    -fx-text-fill: -mx-text;
+    -fx-prompt-text-fill: -mx-muted;
+    -fx-highlight-fill: -mx-row-selected;
+    -fx-highlight-text-fill: -mx-text;
+}
+
+/* Reset inner controls so text is not clipped and no nested box appears */
+.combo-box-base .text-field,
+.combo-box .text-field,
+.date-picker .text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-min-height: 0;
+    -fx-pref-height: -1;
+    -fx-padding: 0 8px 0 12px;
+    -fx-alignment: center-left;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 0 8px 0 12px;
+    -fx-alignment: center-left;
+    -fx-text-fill: -mx-text;
+}
+
+.combo-box-base .arrow-button,
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 12px;
+}
+
+.text-field:focused,
+.text-area:focused,
+.combo-box:focused,
+.date-picker:focused {
+    -fx-border-color: -mx-focus;
+}
+
+/* Disabled controls stay readable */
+.text-field:disabled,
+.text-area:disabled,
+.combo-box:disabled,
+.date-picker:disabled,
+.combo-box-base:disabled .text-field,
+.combo-box:disabled .list-cell,
+.text-input:disabled {
+    -fx-opacity: 1;
+    -fx-background-color: -mx-disabled-surface;
+    -fx-text-fill: -mx-disabled-text;
+    -fx-prompt-text-fill: -mx-disabled-text;
+}
+
+/* List cells (ComboBox popup, ListView) use the theme text colour */
+.list-view .list-cell {
+    -fx-text-fill: -mx-text;
+}
+
+.list-view .list-cell:selected {
+    -fx-text-fill: -mx-text;
+}
+
+/* Table */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: -mx-surface;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: -mx-border;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: transparent;
+    -fx-size: 32px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: -mx-muted;
+    -fx-font-size: 12px;
+    -fx-alignment: center;
+}
+
+.table-row-cell {
+    -fx-background-color: -mx-surface;
+    -fx-border-color: transparent transparent -mx-border transparent;
+    -fx-border-width: 0 0 1px 0;
+    -fx-cell-size: 44px;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: -mx-row-hover;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: -mx-row-selected;
+    /* JavaFX defaults to deep blue text when cell selected, override it: */
+    -fx-text-fill: -mx-text;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: -mx-text;
+}
+
+.table-view .empty {
+    -fx-background-color: transparent;
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: -mx-muted;
+    -fx-font-size: 14px;
+}
+
+/* Table cells: centred horizontally so data lines up under its centred column header */
+.table-view .table-cell {
+    -fx-alignment: center;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
+    -fx-cell-size: 44px;
+    -fx-padding: 0 8px;
+    -fx-text-fill: -mx-text;
+}
+
+.table-view .table-cell.money-col,
+.table-view .column-header.money-col .label,
+.money-col {
+    -fx-alignment: center;
+}
+
+/* TabPane (design system): flat header, primary underline on the selected tab */
+.tab-pane > .tab-header-area {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.tab-pane > .tab-header-area > .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 2px 0;
+    -fx-padding: 8px 16px;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab .tab-label {
+    -fx-text-fill: -mx-muted;
+    -fx-font-size: 14px;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected {
+    -fx-border-color: -mx-primary;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:selected .tab-label {
+    -fx-text-fill: -mx-primary;
+    -fx-font-weight: bold;
+}
+
+.tab-pane > .tab-header-area > .headers-region > .tab:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.tab-pane > .tab-content-area {
+    -fx-background-color: transparent;
+}
+
+/* Dialogs */
+.dialog-pane {
+    -fx-background-color: -mx-surface;
+    -fx-padding: 24px;
+}
+
+.dialog-pane>*.button-bar>*.container {
+    -fx-padding: 16px 0 0 0;
+}
+
+/* Status Badges */
+.badge {
+    -fx-padding: 4px 10px;
+    -fx-background-radius: 16px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.badge-new {
+    -fx-background-color: -mx-badge-new-bg;
+    -fx-text-fill: -mx-badge-new-fg;
+}
+
+.badge-in-production {
+    -fx-background-color: -mx-badge-in-production-bg;
+    -fx-text-fill: -mx-badge-in-production-fg;
+}
+
+.badge-ready {
+    -fx-background-color: -mx-badge-ready-bg;
+    -fx-text-fill: -mx-badge-ready-fg;
+}
+
+.badge-delivered {
+    -fx-background-color: -mx-badge-delivered-bg;
+    -fx-text-fill: -mx-badge-delivered-fg;
+}
+
+.badge-completed {
+    -fx-background-color: -mx-badge-completed-bg;
+    -fx-text-fill: -mx-badge-completed-fg;
+}
+
+.badge-cancelled {
+    -fx-background-color: -mx-badge-cancelled-bg;
+    -fx-text-fill: -mx-badge-cancelled-fg;
+}
+
+.error-label {
+    -fx-text-fill: -mx-debt;
+    -fx-font-size: 12px;
+}
+
+.table-row-cell:filled.overdue {
+    -fx-background-color: -mx-row-overdue;
+}
+
+.table-row-cell:filled.overdue:selected {
+    -fx-background-color: -mx-row-overdue-selected;
+}
+
+.table-row-cell:filled.overdue .due-date-cell .text {
+    -fx-fill: -mx-overdue-text;
+}
+
+/* Order card */
+.table-row-cell:filled.payment-voided {
+    -fx-background-color: -mx-voided;
+}
+
+.table-row-cell:filled.payment-voided .text {
+    -fx-fill: -mx-voided-text;
+}
+
+.overdue-text {
+    -fx-text-fill: -mx-overdue-text;
+}
+
+/* Reports: subtotal / totals rows */
+.table-cell.report-subtotal-row {
+    -fx-font-weight: bold;
+    -fx-background-color: -mx-surface-alt;
+}
+
+/* Icons */
+.muted-icon {
+    -fx-icon-color: -mx-icon-muted;
+}
+
+.accent-icon {
+    -fx-icon-color: -mx-icon-accent;
+}
+
+.sidebar .sidebar-logo-icon {
+    -fx-icon-color: -mx-sidebar-icon;
+}
+
+.primary-button .ikonli-font-icon {
+    -fx-icon-color: -mx-on-primary;
+}
+
+/* Sidebar version footer */
+.sidebar-version {
+    -fx-text-fill: -mx-sidebar-version;
+}
+
+/* Order form: advance (zaklad) section */
+.advance-section {
+    -fx-background-color: -mx-advance-bg;
+    -fx-background-radius: 8px;
+    -fx-padding: 16px;
+}
+
+/* Warning box */
+.warning-box {
+    -fx-text-fill: -mx-warn-text;
+    -fx-background-color: -mx-warn-bg;
+    -fx-padding: 12px;
+    -fx-background-radius: 6px;
+}
+
+/* Theme toggle: sidebar icon button */
+.sidebar-theme-button {
+    -fx-background-color: transparent;
+    -fx-padding: 8px;
+}
+
+.sidebar-theme-button:hover {
+    -fx-background-color: -mx-sidebar-hover;
+}
+
+.sidebar-theme-button .ikonli-font-icon {
+    -fx-fill: -mx-sidebar-icon;
+    -fx-icon-color: -mx-sidebar-icon;
+}
+
+/* Theme toggle: Sozlamalar Ko'rinish card */
+.theme-toggle {
+    -fx-background-color: -mx-surface;
+    -fx-text-fill: -mx-text;
+    -fx-border-color: -mx-border;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.theme-toggle:selected {
+    -fx-background-color: -mx-primary;
+    -fx-text-fill: -mx-on-primary;
+}

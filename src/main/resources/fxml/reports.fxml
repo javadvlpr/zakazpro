@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import javafx.geometry.Insets?>
+<?import com.mebelsex.ui.components.UzDatePicker?>
+
+<VBox spacing="16" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.reports.ReportsController">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label text="%menu.reports" styleClass="page-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="exportButton" text="%report.export" onAction="#handleExport" styleClass="primary-button">
+            <graphic>
+                <FontIcon iconLiteral="fth-download" iconSize="16"/>
+            </graphic>
+        </Button>
+    </HBox>
+
+    <!-- Filters -->
+    <VBox styleClass="card" spacing="12">
+        <HBox alignment="CENTER_LEFT" spacing="12">
+            <Label text="%report.type" styleClass="form-label"/>
+            <ComboBox fx:id="reportTypeCombo" prefWidth="220"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="8">
+            <ToggleButton fx:id="periodTodayButton" text="%report.period.today"/>
+            <ToggleButton fx:id="periodWeekButton" text="%report.period.week"/>
+            <ToggleButton fx:id="periodMonthButton" text="%report.period.month"/>
+            <ToggleButton fx:id="periodPrevMonthButton" text="%report.period.prev_month"/>
+            <ToggleButton fx:id="periodYearButton" text="%report.period.year"/>
+            <ToggleButton fx:id="periodCustomButton" text="%report.period.custom"/>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" spacing="8">
+            <Label text="%report.period.from" styleClass="muted-text"/>
+            <UzDatePicker fx:id="fromField" prefWidth="150"/>
+            <Label text="%report.period.to" styleClass="muted-text"/>
+            <UzDatePicker fx:id="toField" prefWidth="150"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <CheckBox fx:id="onlyDebtorsCheck" text="%report.customers.only_debtors" visible="false" managed="false"/>
+        </HBox>
+    </VBox>
+
+    <!-- Summary cards -->
+    <FlowPane fx:id="summaryBox" hgap="16" vgap="16"/>
+
+    <!-- Report table -->
+    <VBox styleClass="card" spacing="12" VBox.vgrow="ALWAYS">
+        <TableView fx:id="table" VBox.vgrow="ALWAYS" minWidth="200" styleClass="modern-table">
+            <placeholder>
+                <Label fx:id="emptyLabel" text="%report.empty" styleClass="muted-text"/>
+            </placeholder>
+        </TableView>
+    </VBox>
+</VBox>

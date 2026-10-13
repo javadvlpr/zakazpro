@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox prefWidth="480" spacing="16" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.catalog.CategoryFormController">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+
+    <Label fx:id="titleLabel" styleClass="page-title"/>
+
+    <VBox spacing="4">
+        <Label text="%expense.category.name" styleClass="muted-text"/>
+        <TextField fx:id="nameField" maxWidth="Infinity"/>
+    </VBox>
+
+    <Label fx:id="errorLabel" styleClass="error-label" visible="false" managed="false" wrapText="true"/>
+
+    <HBox spacing="12" alignment="CENTER_RIGHT">
+        <Button fx:id="cancelButton" text="%action.cancel" onAction="#handleCancel" styleClass="secondary-button"/>
+        <Button fx:id="saveButton" text="%action.save" onAction="#handleSave" styleClass="primary-button"/>
+    </HBox>
+</VBox>

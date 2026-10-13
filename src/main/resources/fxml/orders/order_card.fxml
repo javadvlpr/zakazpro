@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import com.mebelsex.ui.components.MoneyField?>
+<?import com.mebelsex.ui.components.UzDatePicker?>
+<?import com.mebelsex.ui.components.QuantityField?>
+
+<VBox spacing="16" styleClass="content-area" maxWidth="Infinity" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.orders.OrderCardController">
+
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Button text="%menu.orders" onAction="#handleBack" styleClass="secondary-button">
+            <graphic><FontIcon iconLiteral="fth-arrow-left" iconSize="16"/></graphic>
+        </Button>
+        <Label fx:id="titleLabel" styleClass="page-title"/>
+        <HBox fx:id="statusBox" alignment="CENTER_LEFT"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="editButton" text="%action.edit" onAction="#handleEdit" styleClass="secondary-button">
+            <graphic><FontIcon iconLiteral="fth-edit-2" iconSize="16"/></graphic>
+        </Button>
+        <Button fx:id="statusButton" text="%action.change_status" onAction="#handleStatusChange" styleClass="secondary-button">
+            <graphic><FontIcon iconLiteral="fth-repeat" iconSize="16"/></graphic>
+        </Button>
+    </HBox>
+
+    <!-- Customer / order info -->
+    <VBox styleClass="card" spacing="6">
+        <Label fx:id="customerLabel" styleClass="section-title"/>
+        <Label fx:id="phoneLabel" styleClass="muted-text"/>
+        <Label fx:id="productLabel" wrapText="true"/>
+        <Label fx:id="orderDateLabel"/>
+        <Label fx:id="dueDateLabel"/>
+    </VBox>
+
+    <!-- Money cards -->
+    <HBox spacing="16">
+        <VBox styleClass="card" HBox.hgrow="ALWAYS" minWidth="0" spacing="6">
+            <Label text="%order.price" styleClass="stat-card-title"/>
+            <Label fx:id="priceValueLabel" styleClass="stat-card-value" wrapText="true"/>
+        </VBox>
+        <VBox styleClass="card" HBox.hgrow="ALWAYS" minWidth="0" spacing="6">
+            <Label text="%order.paid" styleClass="stat-card-title"/>
+            <Label fx:id="paidValueLabel" styleClass="stat-card-value" wrapText="true"/>
+        </VBox>
+        <VBox styleClass="card" HBox.hgrow="ALWAYS" minWidth="0" spacing="6">
+            <Label text="%order.debt" styleClass="stat-card-title"/>
+            <Label fx:id="debtValueLabel" styleClass="stat-card-value" wrapText="true"/>
+        </VBox>
+    </HBox>
+
+    <TabPane fx:id="tabs" VBox.vgrow="ALWAYS">
+        <Tab text="%order.card.tab.payments" closable="false">
+            <VBox spacing="12" style="-fx-padding: 12 0 0 0;">
+                <TableView fx:id="paymentsTable" VBox.vgrow="ALWAYS" minWidth="200">
+                    <columns>
+                        <TableColumn fx:id="colDate" text="%order.card.col.date" prefWidth="110"/>
+                        <TableColumn fx:id="colKind" text="%order.card.col.kind" prefWidth="130"/>
+                        <TableColumn fx:id="colMethod" text="%order.card.col.method" prefWidth="120"/>
+                        <TableColumn fx:id="colAmount" text="%order.card.col.amount" prefWidth="140" styleClass="money-col"/>
+                        <TableColumn fx:id="colComment" text="%order.card.col.comment" prefWidth="240"/>
+                        <TableColumn fx:id="colStatus" text="%order.card.col.status" prefWidth="120"/>
+                    </columns>
+                    <placeholder>
+                        <Label text="%order.card.payments.empty" styleClass="muted-text"/>
+                    </placeholder>
+                </TableView>
+
+                <VBox fx:id="quickAddRow" spacing="8">
+                    <HBox spacing="8" alignment="CENTER_LEFT">
+                        <MoneyField fx:id="amountField" prefWidth="130" minWidth="0"/>
+                        <ComboBox fx:id="kindCombo" prefWidth="170" minWidth="0"/>
+                        <ComboBox fx:id="methodCombo" prefWidth="120" minWidth="0"/>
+                        <UzDatePicker fx:id="dateField" prefWidth="150" minWidth="0"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Button fx:id="addButton" text="%order.card.add_payment" onAction="#handleAddPayment" styleClass="primary-button"/>
+                    </HBox>
+                    <TextField fx:id="commentField" promptText="%order.card.col.comment" maxWidth="Infinity"/>
+                </VBox>
+
+                <HBox spacing="12" alignment="CENTER_LEFT">
+                    <Label fx:id="remainingDebtLabel"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button fx:id="voidPaymentButton" text="%order.card.void_payment" onAction="#handleVoidPayment" styleClass="danger-button"/>
+                </HBox>
+                <Label fx:id="cancelledNote" text="%order.card.cancelled_note" styleClass="muted-text" visible="false" managed="false" wrapText="true"/>
+                <Label fx:id="paymentErrorLabel" styleClass="error-label" visible="false" managed="false" wrapText="true"/>
+            </VBox>
+        </Tab>
+        <Tab text="%order.card.tab.expenses" closable="false">
+            <VBox spacing="12" style="-fx-padding: 12 0 0 0;">
+                <TableView fx:id="expensesTable" VBox.vgrow="ALWAYS" minWidth="200">
+                    <columns>
+                        <TableColumn fx:id="colExpDate" text="%order.card.col.date" prefWidth="100"/>
+                        <TableColumn fx:id="colExpCategory" text="%order.card.col.category" prefWidth="140"/>
+                        <TableColumn fx:id="colExpItem" text="%order.card.col.item" prefWidth="200"/>
+                        <TableColumn fx:id="colExpQuantity" text="%order.card.col.quantity" prefWidth="100" styleClass="money-col"/>
+                        <TableColumn fx:id="colExpPrice" text="%order.card.col.unit_price" prefWidth="120" styleClass="money-col"/>
+                        <TableColumn fx:id="colExpAmount" text="%order.card.col.amount" prefWidth="130" styleClass="money-col"/>
+                        <TableColumn fx:id="colExpStatus" text="%order.card.col.status" prefWidth="110"/>
+                    </columns>
+                    <placeholder>
+                        <Label text="%order.card.expenses.empty" styleClass="muted-text"/>
+                    </placeholder>
+                </TableView>
+
+                <VBox fx:id="expenseQuickAdd" spacing="8">
+                    <HBox spacing="8" alignment="CENTER_LEFT">
+                        <ComboBox fx:id="expenseCategoryCombo" prefWidth="180" minWidth="0"/>
+                        <ComboBox fx:id="expenseItemCombo" prefWidth="200" minWidth="0"/>
+                        <QuantityField fx:id="expenseQuantityField" prefWidth="100" minWidth="0"/>
+                        <MoneyField fx:id="expensePriceField" prefWidth="150" minWidth="0"/>
+                        <UzDatePicker fx:id="expenseDateField" prefWidth="150" minWidth="0"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Button fx:id="addExpenseButton" text="%order.card.add_payment" onAction="#handleAddExpense" styleClass="primary-button"/>
+                    </HBox>
+                    <HBox spacing="12" alignment="CENTER_LEFT">
+                        <TextField fx:id="expenseDescriptionField" promptText="%order.card.col.comment" maxWidth="Infinity"/>
+                        <Label fx:id="expenseSumLabel" styleClass="muted-text"/>
+                    </HBox>
+                </VBox>
+
+                <HBox spacing="12" alignment="CENTER_LEFT">
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button fx:id="voidExpenseButton" text="%order.card.expenses.void" onAction="#handleVoidExpense" styleClass="danger-button"/>
+                </HBox>
+                <Label fx:id="expenseCancelledNote" text="%order.card.expenses.cancelled" styleClass="muted-text" visible="false" managed="false" wrapText="true"/>
+                <Label fx:id="expenseErrorLabel" styleClass="error-label" visible="false" managed="false" wrapText="true"/>
+            </VBox>
+        </Tab>
+        <Tab text="%order.card.tab.works" closable="false">
+            <VBox spacing="12" style="-fx-padding: 12 0 0 0;">
+                <TableView fx:id="worksTable" VBox.vgrow="ALWAYS" minWidth="200">
+                    <columns>
+                        <TableColumn fx:id="colWorkDate" text="%order.card.col.date" prefWidth="100"/>
+                        <TableColumn fx:id="colWorkEmployee" text="%order.card.works.select_employee" prefWidth="160"/>
+                        <TableColumn fx:id="colWorkOperation" text="%operation.name" prefWidth="180"/>
+                        <TableColumn fx:id="colWorkQuantity" text="%order.card.col.quantity" prefWidth="100" styleClass="money-col"/>
+                        <TableColumn fx:id="colWorkPrice" text="%order.card.col.unit_price" prefWidth="120" styleClass="money-col"/>
+                        <TableColumn fx:id="colWorkAmount" text="%order.card.col.amount" prefWidth="130" styleClass="money-col"/>
+                        <TableColumn fx:id="colWorkStatus" text="%order.card.col.status" prefWidth="110"/>
+                    </columns>
+                    <placeholder>
+                        <Label text="%order.card.works.empty" styleClass="muted-text"/>
+                    </placeholder>
+                </TableView>
+
+                <VBox fx:id="workQuickAdd" spacing="8">
+                    <HBox spacing="8" alignment="CENTER_LEFT">
+                        <ComboBox fx:id="workEmployeeCombo" prefWidth="180" minWidth="0"/>
+                        <ComboBox fx:id="workOperationCombo" prefWidth="200" minWidth="0"/>
+                        <QuantityField fx:id="workQuantityField" prefWidth="100" minWidth="0"/>
+                        <MoneyField fx:id="workPriceField" prefWidth="150" minWidth="0"/>
+                        <UzDatePicker fx:id="workDateField" prefWidth="150" minWidth="0"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Button fx:id="addWorkButton" text="%order.card.works.add" onAction="#handleAddWork" styleClass="primary-button"/>
+                    </HBox>
+                    <HBox spacing="12" alignment="CENTER_LEFT">
+                        <TextField fx:id="workCommentField" promptText="%order.card.works.comment" maxWidth="Infinity"/>
+                        <Label fx:id="workSumLabel" styleClass="muted-text"/>
+                    </HBox>
+                </VBox>
+
+                <HBox spacing="12" alignment="CENTER_LEFT">
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button fx:id="voidWorkButton" text="%order.card.works.void" onAction="#handleVoidWork" styleClass="danger-button"/>
+                </HBox>
+                <Label fx:id="workCancelledNote" text="%order.card.works.cancelled" styleClass="muted-text" visible="false" managed="false" wrapText="true"/>
+                <Label fx:id="workErrorLabel" styleClass="error-label" visible="false" managed="false" wrapText="true"/>
+            </VBox>
+        </Tab>
+        <Tab text="%order.card.tab.summary" closable="false">
+            <VBox spacing="16" style="-fx-padding: 12 0 0 0;">
+                <GridPane hgap="24" vgap="12">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="180" prefWidth="220"/>
+                        <ColumnConstraints hgrow="ALWAYS"/>
+                    </columnConstraints>
+                    <Label text="%order.price" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="stat-card-title"/>
+                    <Label fx:id="summaryPriceLabel" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="stat-card-value"/>
+                </GridPane>
+                <Separator/>
+                <GridPane hgap="24" vgap="12">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="180" prefWidth="220"/>
+                        <ColumnConstraints hgrow="ALWAYS"/>
+                    </columnConstraints>
+                    <Label text="%order.card.summary.material" GridPane.rowIndex="0" GridPane.columnIndex="0" styleClass="stat-card-title"/>
+                    <Label fx:id="summaryExpensesLabel" GridPane.rowIndex="0" GridPane.columnIndex="1" styleClass="stat-card-value"/>
+                    <VBox fx:id="summaryCategoryBox" spacing="2" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                    <Label text="%order.card.summary.price_before_labor" GridPane.rowIndex="2" GridPane.columnIndex="0" styleClass="stat-card-title"/>
+                    <Label fx:id="summaryProfitBeforeLaborLabel" GridPane.rowIndex="2" GridPane.columnIndex="1" styleClass="stat-card-value"/>
+                    <Label text="%order.card.summary.labor" GridPane.rowIndex="3" GridPane.columnIndex="0" styleClass="stat-card-title"/>
+                    <Label fx:id="summaryLaborLabel" GridPane.rowIndex="3" GridPane.columnIndex="1" styleClass="stat-card-value"/>
+                    <VBox fx:id="summaryLaborEmployeesBox" spacing="2" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+                    <Label text="%order.card.summary.profit" GridPane.rowIndex="5" GridPane.columnIndex="0" styleClass="stat-card-title"/>
+                    <Label fx:id="summaryNetProfitLabel" GridPane.rowIndex="5" GridPane.columnIndex="1" styleClass="stat-card-value"/>
+                    <Label text="%order.paid" GridPane.rowIndex="6" GridPane.columnIndex="0" styleClass="stat-card-title"/>
+                    <Label fx:id="summaryPaidLabel" GridPane.rowIndex="6" GridPane.columnIndex="1" styleClass="stat-card-value"/>
+                    <Label text="%order.debt" GridPane.rowIndex="7" GridPane.columnIndex="0" styleClass="stat-card-title"/>
+                    <Label fx:id="summaryDebtLabel" GridPane.rowIndex="7" GridPane.columnIndex="1" styleClass="stat-card-value"/>
+                </GridPane>
+            </VBox>
+        </Tab>
+    </TabPane>
+</VBox>

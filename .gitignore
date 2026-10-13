@@ -1,0 +1,54 @@
+HELP.md
+target/
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+snapshots_*/
+*.txt
+*.db
+.freebuff/
+HELP.md
+
+### License keys: never commit a private key ###
+license-private.key
+*.key.bak
+tools/keys/
+# The app's public key must stay tracked (only the owner replaces its content).
+!src/main/resources/license/license-public.key
+
+.idea/
+.agents/
+.vscode/
+.target/
+.env
+.HANDOFF.md
+.AGENTS.md

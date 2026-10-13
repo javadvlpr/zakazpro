@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import com.mebelsex.ui.components.SearchField?>
+<?import com.mebelsex.ui.components.UzDatePicker?>
+
+<VBox spacing="16" stylesheets="@../css/application.css" styleClass="content-area" maxWidth="Infinity" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.employees.EmployeesController">
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label text="%menu.employees" styleClass="page-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label text="%employee.as_of"/>
+        <UzDatePicker fx:id="asOfPicker" prefWidth="150"/>
+        <SearchField fx:id="searchField" promptText="%employee.search" prefWidth="200"/>
+        <CheckBox fx:id="showInactive" text="%expense.catalog.show_inactive"/>
+        <Button fx:id="newEmployeeButton" text="%employee.new" onAction="#handleNewEmployee" styleClass="primary-button">
+            <graphic><FontIcon iconLiteral="fth-plus" iconSize="16"/></graphic>
+        </Button>
+    </HBox>
+
+    <TableView fx:id="employeeTable" VBox.vgrow="ALWAYS" minWidth="200">
+        <columns>
+            <TableColumn fx:id="colName" text="%employee.col.name" prefWidth="240"/>
+            <TableColumn fx:id="colPosition" text="%employee.col.position" prefWidth="160"/>
+            <TableColumn fx:id="colOpening" text="%employee.col.opening" prefWidth="150" styleClass="money-col"/>
+            <TableColumn fx:id="colEarned" text="%employee.col.earned" prefWidth="150" styleClass="money-col"/>
+            <TableColumn fx:id="colPaid" text="%employee.col.paid" prefWidth="150" styleClass="money-col"/>
+            <TableColumn fx:id="colBalance" text="%employee.col.balance" prefWidth="160" styleClass="money-col"/>
+        </columns>
+        <placeholder>
+            <Label text="%employee.empty" styleClass="muted-text"/>
+        </placeholder>
+    </TableView>
+
+    <HBox alignment="CENTER_LEFT" spacing="16">
+        <Label fx:id="owedTotalLabel" styleClass="section-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label text="%employee.legend" styleClass="muted-text" wrapText="true"/>
+    </HBox>
+</VBox>

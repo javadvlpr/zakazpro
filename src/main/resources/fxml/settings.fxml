@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox spacing="16" stylesheets="@../css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.settings.SettingsController">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+
+    <HBox alignment="CENTER_LEFT" spacing="12">
+        <Label text="%menu.settings" styleClass="page-title"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="saveButton" text="%action.save" onAction="#handleSave" styleClass="primary-button">
+            <graphic>
+                <FontIcon iconLiteral="fth-save" iconSize="16"/>
+            </graphic>
+        </Button>
+    </HBox>
+
+    <ScrollPane fitToWidth="true" styleClass="scroll-pane" VBox.vgrow="ALWAYS">
+        <VBox spacing="16">
+
+            <!-- ================= Ko'rinish ================= -->
+            <VBox styleClass="card" spacing="12">
+                <Label text="%settings.appearance.title" styleClass="section-title"/>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <ToggleButton fx:id="lightThemeToggle" text="%settings.appearance.light" styleClass="theme-toggle"/>
+                    <ToggleButton fx:id="darkThemeToggle" text="%settings.appearance.dark" styleClass="theme-toggle"/>
+                </HBox>
+            </VBox>
+
+            <!-- ================= Litsenziya ================= -->
+            <VBox styleClass="card" spacing="12">
+                <Label text="%settings.license.title" styleClass="section-title"/>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label text="%settings.license.status" styleClass="form-label"/>
+                    <Label fx:id="licenseStateLabel"/>
+                    <Label fx:id="licenseDevLabel" text="%settings.license.dev" managed="false" visible="false" styleClass="muted-text"/>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label text="%settings.license.customer" styleClass="form-label"/>
+                    <Label fx:id="licenseCustomerLabel"/>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label text="%settings.license.valid_until" styleClass="form-label"/>
+                    <Label fx:id="licenseValidUntilLabel"/>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label text="%settings.license.machine" styleClass="form-label"/>
+                    <TextField fx:id="licenseMachineField" editable="false" minWidth="0" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                    <Button fx:id="licenseCopyButton" text="%license.activation.copy" onAction="#handleCopyMachineId" minWidth="0"/>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label text="%settings.license.license_id" styleClass="form-label"/>
+                    <Label fx:id="licenseIdLabel"/>
+                </HBox>
+                <HBox>
+                    <Button fx:id="licenseChooseButton" text="%settings.license.choose" onAction="#handleImportLicense"/>
+                </HBox>
+                <Label fx:id="licenseRenewHint" text="%settings.license.renew_hint" wrapText="true" minWidth="0" managed="false" visible="false" styleClass="muted-text"/>
+            </VBox>
+
+            <!-- ================= Korxona ================= -->
+            <VBox styleClass="card" spacing="12">
+                <Label text="%settings.company.title" styleClass="section-title"/>
+                <VBox spacing="4">
+                    <Label text="%settings.company.name" styleClass="muted-text"/>
+                    <TextField fx:id="companyNameField" maxWidth="Infinity"/>
+                </VBox>
+                <VBox spacing="4">
+                    <Label text="%settings.company.phone" styleClass="muted-text"/>
+                    <TextField fx:id="companyPhoneField" maxWidth="Infinity"/>
+                </VBox>
+                <VBox spacing="4">
+                    <Label text="%settings.company.address" styleClass="muted-text"/>
+                    <TextField fx:id="companyAddressField" maxWidth="Infinity"/>
+                </VBox>
+            </VBox>
+
+            <!-- ================= Backup ================= -->
+            <VBox styleClass="card" spacing="12">
+                <Label text="%settings.backup.title" styleClass="section-title"/>
+
+                <VBox spacing="4">
+                    <Label text="%settings.backup.folder" styleClass="muted-text"/>
+                    <HBox alignment="CENTER_LEFT" spacing="8">
+                        <TextField fx:id="backupFolderField" editable="false" minWidth="0" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                        <Button fx:id="chooseFolderButton" text="%settings.backup.choose" onAction="#handleChooseFolder"/>
+                        <Button fx:id="openFolderButton" text="%settings.backup.open_folder" onAction="#handleOpenFolder"/>
+                    </HBox>
+                </VBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="16">
+                    <CheckBox fx:id="backupAutoCheck" text="%settings.backup.auto"/>
+                    <Label text="%settings.backup.time" styleClass="form-label"/>
+                    <ComboBox fx:id="backupHourCombo" prefWidth="90"/>
+                    <ComboBox fx:id="backupMinuteCombo" prefWidth="90"/>
+                    <CheckBox fx:id="backupOnCloseCheck" text="%settings.backup.on_close"/>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label text="%settings.backup.keep_days" styleClass="form-label"/>
+                    <TextField fx:id="keepDaysField" prefWidth="100"/>
+                    <Label text="%settings.backup.keep_days.hint" styleClass="muted-text"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button fx:id="backupNowButton" text="%settings.backup.now" onAction="#handleBackupNow" styleClass="primary-button"/>
+                </HBox>
+
+                <Label fx:id="backupStatusLabel" text="—" styleClass="section-title"/>
+                <Label text="%settings.backup.warning" styleClass="muted-text" wrapText="true"/>
+
+                <TableView fx:id="recentTable" prefHeight="200" minWidth="200">
+                    <placeholder>
+                        <Label text="%settings.backup.empty" styleClass="muted-text"/>
+                    </placeholder>
+                </TableView>
+            </VBox>
+
+            <!-- ================= Tiklash ================= -->
+            <VBox styleClass="card" spacing="12">
+                <Label text="%settings.restore.title" styleClass="section-title"/>
+                <Label text="%settings.restore.warning" wrapText="true" styleClass="stat-card-debt"/>
+                <HBox>
+                    <Button fx:id="restoreButton" text="%settings.restore.choose" onAction="#handleRestoreFile"/>
+                </HBox>
+            </VBox>
+
+            <!-- ================= Dastur haqida ================= -->
+            <VBox styleClass="card" spacing="12">
+                <Label text="%settings.about.title" styleClass="section-title"/>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label text="%settings.about.version" styleClass="form-label"/>
+                    <Label fx:id="versionLabel" text="—"/>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Label text="%settings.about.db_path" styleClass="form-label"/>
+                    <TextField fx:id="dbPathField" editable="false" minWidth="0" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+                </HBox>
+                <HBox alignment="CENTER_LEFT" spacing="8">
+                    <Button fx:id="openLogsButton" text="%settings.about.open_logs" onAction="#handleOpenLogs"/>
+                    <Button fx:id="createDiagnosticsButton" text="%settings.about.diagnostics" onAction="#handleCreateDiagnostics"/>
+                </HBox>
+            </VBox>
+
+        </VBox>
+    </ScrollPane>
+</VBox>

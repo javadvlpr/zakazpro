@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import com.mebelsex.ui.components.SearchField?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.customers.CustomersController" styleClass="content-area" spacing="24" maxWidth="Infinity">
+    <!-- Header -->
+    <HBox alignment="CENTER_LEFT" spacing="16">
+        <Label text="%menu.customers" styleClass="page-title" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        <SearchField fx:id="searchField" promptText="%ui.search.prompt" prefWidth="300"/>
+        <Button text="%ui.delete" styleClass="danger-button" fx:id="deleteButton" onAction="#handleDelete">
+            <graphic><FontIcon iconLiteral="fth-trash-2" iconSize="16"/></graphic>
+        </Button>
+        <Button text="%ui.edit" styleClass="secondary-button" fx:id="editButton" onAction="#handleEdit">
+            <graphic><FontIcon iconLiteral="fth-edit-2" iconSize="16"/></graphic>
+        </Button>
+        <Button fx:id="newCustomerButton" text="%ui.new_customer" styleClass="primary-button" onAction="#handleNew">
+            <graphic><FontIcon iconLiteral="fth-plus" iconSize="16"/></graphic>
+        </Button>
+    </HBox>
+
+    <!-- Table -->
+    <VBox styleClass="card" VBox.vgrow="ALWAYS">
+        <TableView fx:id="table" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colName" text="%ui.customer.name" prefWidth="250"/>
+                <TableColumn fx:id="colPhone" text="%ui.customer.phone" prefWidth="180"/>
+                <TableColumn fx:id="colAddress" text="%ui.customer.address" prefWidth="300"/>
+            </columns>
+            <placeholder>
+                <Label text="%ui.no_customers" styleClass="muted-text"/>
+            </placeholder>
+        </TableView>
+    </VBox>
+
+</VBox>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+<?import com.mebelsex.ui.components.MoneyField?>
+
+<VBox prefWidth="520" spacing="16" stylesheets="@../../css/application.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mebelsex.ui.catalog.OperationFormController">
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+
+    <Label fx:id="titleLabel" styleClass="page-title"/>
+
+    <VBox spacing="4">
+        <Label text="%operation.name" styleClass="muted-text"/>
+        <TextField fx:id="nameField" maxWidth="Infinity"/>
+    </VBox>
+
+    <VBox spacing="4">
+        <Label text="%operation.unit" styleClass="muted-text"/>
+        <ComboBox fx:id="unitCombo" editable="true" maxWidth="Infinity"/>
+    </VBox>
+
+    <VBox spacing="4">
+        <Label text="%operation.default_price" styleClass="muted-text"/>
+        <MoneyField fx:id="priceField" maxWidth="Infinity"/>
+    </VBox>
+
+    <Label fx:id="errorLabel" styleClass="error-label" visible="false" managed="false" wrapText="true"/>
+
+    <HBox spacing="12" alignment="CENTER_RIGHT">
+        <Button fx:id="cancelButton" text="%action.cancel" onAction="#handleCancel" styleClass="secondary-button"/>
+        <Button fx:id="saveButton" text="%action.save" onAction="#handleSave" styleClass="primary-button"/>
+    </HBox>
+</VBox>
